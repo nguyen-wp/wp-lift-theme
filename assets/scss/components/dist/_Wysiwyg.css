@@ -1,0 +1,61 @@
+.WysiwygAnchors a, .Wysiwyg a, .WysiwygAnchors a:visited {
+  @apply text-link;
+  transition: all 0.24s ease;
+}
+.WysiwygAnchors a:hover, .Wysiwyg a:hover, .WysiwygAnchors a:focus, .Wysiwyg a:focus, .WysiwygAnchors a:visited:hover, .WysiwygAnchors a:visited:focus {
+  @apply text-link-hover;
+}
+h1 .WysiwygAnchors a, h1 .Wysiwyg a, h1 .WysiwygAnchors a:visited, h2 .WysiwygAnchors a, h2 .Wysiwyg a, h2 .WysiwygAnchors a:visited, h3 .WysiwygAnchors a, h3 .Wysiwyg a, h3 .WysiwygAnchors a:visited, h4 .WysiwygAnchors a, h4 .Wysiwyg a, h4 .WysiwygAnchors a:visited, h5 .WysiwygAnchors a, h5 .Wysiwyg a, h5 .WysiwygAnchors a:visited, h6 .WysiwygAnchors a, h6 .Wysiwyg a, h6 .WysiwygAnchors a:visited {
+  color: inherit;
+}
+
+.WysiwygHeadings h1, .Wysiwyg h1, .WysiwygHeadings h2, .Wysiwyg h2, .WysiwygHeadings h3, .Wysiwyg h3, .WysiwygHeadings h4, .Wysiwyg h4, .WysiwygHeadings h5, .Wysiwyg h5, .WysiwygHeadings h6, .Wysiwyg h6 {
+  @apply font-sans font-semibold text-black leading-tight;
+}
+.WysiwygHeadings h1, .Wysiwyg h1 {
+  @apply text-2xl;
+}
+.WysiwygHeadings h2, .Wysiwyg h2 {
+  @apply text-xl;
+}
+.WysiwygHeadings h3, .Wysiwyg h3, .WysiwygHeadings h4, .Wysiwyg h4, .WysiwygHeadings h5, .Wysiwyg h5 {
+  @apply text-lg;
+}
+
+.WysiwygImages img.aligncenter, .Wysiwyg img.aligncenter {
+  @apply block mx-auto;
+}
+.WysiwygImages .gallery .gallery-item, .Wysiwyg .gallery .gallery-item {
+  @apply text-center border-0;
+}
+.WysiwygImages .gallery .gallery-icon, .Wysiwyg .gallery .gallery-icon {
+  @apply text-center;
+}
+.WysiwygImages .gallery img, .Wysiwyg .gallery img {
+  @apply inline;
+  border: none !important;
+}
+.WysiwygImages .wp-caption-text, .Wysiwyg .wp-caption-text {
+  @apply text-sm mt-2;
+}
+
+.WysiwygCode code, .Wysiwyg code {
+  @apply font-mono inline-block px-1 rounded-sm text-sm align-baseline bg-pink-100 text-pink-600;
+}
+
+.WysiwygSpacing p, .Wysiwyg p, .WysiwygSpacing ul, .Wysiwyg ul, .WysiwygSpacing ol, .Wysiwyg ol, .WysiwygSpacing hr, .Wysiwyg hr, .WysiwygSpacing .wp-block-embed, .Wysiwyg .wp-block-embed, .WysiwygSpacing .gallery, .Wysiwyg .gallery, .WysiwygSpacing [class*=wp-image-], .Wysiwyg [class*=wp-image-] {
+  @apply my-8;
+}
+
+.WysiwygLists ul, .Wysiwyg ul, .WysiwygLists ol, .Wysiwyg ol {
+  @apply ml-6 list-outside m-trim;
+}
+.WysiwygLists ul, .Wysiwyg ul {
+  @apply list-disc;
+}
+.WysiwygLists ol, .Wysiwyg ol {
+  @apply list-decimal;
+}
+.WysiwygLists li, .Wysiwyg li {
+  @apply my-3;
+}
