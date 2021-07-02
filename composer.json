@@ -1,0 +1,5 @@
+{
+    "require": {
+        "redux-framework/redux-framework": "*"
+    }
+}

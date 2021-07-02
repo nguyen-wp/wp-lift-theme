@@ -1,0 +1,13 @@
+<?php
+/**
+ * Show the appropriate content for the Aside post format.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package LIFT Creations 
+ * @subpackage Theme by Nguyen Pham
+ * @since 2021
+ */
+
+// Print the full content.
+the_content();
