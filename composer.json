@@ -1,5 +1,6 @@
 {
     "require": {
-        "redux-framework/redux-framework": "*"
+        "redux-framework/redux-framework": "*",
+		"scssphp/scssphp": "^1.6.0"
     }
 }

@@ -3,11 +3,12 @@
      * ---> SET ARGUMENTS
      * For full documentation on arguments, please refer to: https://github.com/ReduxFramework/ReduxFramework/wiki/Arguments
      * */
-
+	$opt_name = "lift_theme";
     $theme = wp_get_theme(); // For use with some settings. Not necessary.
 
     $args = array(
 		'dev_mode' => false,
+		'class' => 'lift-theme-admin',
         // TYPICAL -> Change these values as you need/desire
         'opt_name'             => $opt_name,
         // This is where your data is stored in the database and also becomes your global variable name.
@@ -19,7 +20,7 @@
         //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
         'allow_sub_menu'       => true,
         // Show the sections below the admin menu item or not
-		'menu_title'           => esc_html__( 'LIFT Theme Options', 'lift-theme-options' ),
+		'menu_title'           => esc_html__( 'LIFT Theme', 'lift-theme-options' ),
 		'page_title'           => esc_html__( 'LIFT Theme', 'lift-theme-options' ),
         // You will need to generate a Google API key to use this feature.
         // Please visit: https://developers.google.com/fonts/docs/developer_api#Auth
@@ -32,9 +33,9 @@
         //'disable_google_fonts_link' => true,                    // Disable this in case you want to create your own google fonts loader
         'admin_bar'            => true,
         // Show the panel pages on the admin bar
-        'admin_bar_icon'       => 'dashicons-portfolio',
+        'admin_bar_icon'       => 'bi bi-award',
         // Choose an icon for the admin bar menu
-        'admin_bar_priority'   => 50,
+        'admin_bar_priority'   => 31,
         // Choose an priority for the admin bar menu
         'global_variable'      => '',
         // Set a different name for your global variable other than the opt_name
@@ -43,17 +44,17 @@
         // If dev_mode is enabled, will notify developer of updated versions available in the GitHub Repo
         'customizer'           => true,
         // Enable basic customizer support
-        //'open_expanded'     => true,                    // Allow you to start the panel in an expanded way initially.
+        // 'open_expanded'     => true,                    // Allow you to start the panel in an expanded way initially.
         //'disable_save_warn' => true,                    // Disable the save warning when a user changes a field
-
+		'system_info' => true,
         // OPTIONAL -> Give you extra features
-        'page_priority'        => null,
+        'page_priority'        => '3',
         // Order where the menu appears in the admin area. If there is any conflict, something will not show. Warning.
         'page_parent'          => 'themes.php',
         // For a full list of options, visit: http://codex.wordpress.org/Function_Reference/add_submenu_page#Parameters
         'page_permissions'     => 'manage_options',
         // Permissions needed to access the options panel.
-        'menu_icon'            => '',
+        'menu_icon'            => 'dashicons-admin-generic',
         // Specify a custom URL to an icon
         'last_tab'             => '',
         // Force your panel to always open to a specific tab (by id)
@@ -76,7 +77,7 @@
         // Global shut-off for dynamic CSS output by the framework. Will also disable google fonts output
         'output_tag'           => true,
         // Allows dynamic CSS to be generated for customizer and google fonts, but stops the dynamic CSS from going to the head
-        // 'footer_credit'             => 'by LIFT Theme',
+        'footer_credit'             => 'LIFT Creations - Create something great',
 
         // FUTURE -> Not in use yet, but reserved or partially implemented. Use at your own risk.
         'database'             => '',
@@ -119,31 +120,55 @@
 $args['admin_bar_links'][] = array(
 	'id'    => 'lift-theme',
 	'href'  => '//github.com/nguyen-wp/lift-theme/',
-	'title' => __( 'Documentation', 'lift-theme' ),
+	'title' => __( 'Documentation', 'lift-theme-options' ),
 );
 $args['share_icons'][] = array(
 	'url'   => '//github.com/nguyen-wp/lift-theme/',
-	'title' => 'Visit us on GitHub',
+	'title' => __('Visit us on GitHub', 'lift-theme-options' ),
 	'icon'  => 'el el-github',
 );
 
-    // Panel Intro text -> before the form
-    if ( ! isset( $args['global_variable'] ) || $args['global_variable'] !== false ) {
-        if ( ! empty( $args['global_variable'] ) ) {
-            $v = $args['global_variable'];
-        } else {
-            $v = str_replace( '-', '_', $args['opt_name'] );
-        }
-        $args['intro_text'] = sprintf( __( '<p>Did you know that LIFT sets a global variable for you? To access any of your saved options from within your code you can use your global variable: <strong>$%1$s</strong></p>', 'lift-theme-options' ), $v );
-    } else {
-        $args['intro_text'] = __( '<p>This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.</p>', 'lift-theme-options' );
-    }
+// Panel Intro text -> before the form
+if ( ! isset( $args['global_variable'] ) || $args['global_variable'] !== false ) {
+	if ( ! empty( $args['global_variable'] ) ) {
+		$v = $args['global_variable'];
+	} else {
+		$v = str_replace( '-', '_', $args['opt_name'] );
+	}
+	$args['intro_text'] = sprintf( __( '<p>As of WP 4.3, the favicon setting is now available in the default WordPress customizer (Appearance > Customize).</p>', 'lift-theme-options' ), $v );
+} else {
+	$args['intro_text'] = __( '<p>This text is displayed above the options panel. It isn\'t required, but more info is always better! The intro_text field accepts all HTML.</p>', 'lift-theme-options' );
+}
 
-    // Add content after the form.
-    $args['footer_text'] = __( '<p>by LIFT Creations - Author <a href="https://baonguyenyam.github.io/cv/" target="_blank">Nguyen Pham</a></p>', 'lift-theme-options' );
+// Add content after the form.
+$args['footer_text'] = __( '<p>by LIFT Creations - Author <a href="https://baonguyenyam.github.io/cv/" target="_blank">Nguyen Pham</a></p>', 'lift-theme-options' );
 
-    Redux::setArgs( $opt_name, $args );
+Redux::setArgs( $opt_name, $args );
 
-    /*
-     * ---> END ARGUMENTS
-     */
+////////////////////////////////////////////////////////////////////////
+// MORE OPTION 
+////////////////////////////////////////////////////////////////////////
+
+// Background Patterns Reader
+$lift_patterns_path =  'theme-options/patterns/';
+$lift_patterns_url  =  'theme-options/patterns/';
+$lift_patterns      = array();
+
+if ( is_dir( $lift_patterns_path ) ) {
+
+	if ( $lift_patterns_dir = opendir( $lift_patterns_path ) ) {
+		$lift_patterns = array();
+
+		while ( ( $lift_patterns_file = readdir( $lift_patterns_dir ) ) !== false ) {
+
+			if ( stristr( $lift_patterns_file, '.png' ) !== false || stristr( $lift_patterns_file, '.jpg' ) !== false ) {
+				$name              = explode( '.', $lift_patterns_file );
+				$name              = str_replace( '.' . end( $name ), '', $lift_patterns_file );
+				$lift_patterns[] = array(
+					'alt' => $name,
+					'img' => $lift_patterns_url . $lift_patterns_file
+				);
+			}
+		}
+	}
+}

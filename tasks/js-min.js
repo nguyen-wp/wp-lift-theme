@@ -7,9 +7,9 @@ module.exports = function (gulp, $, browserSync) {
 			])
 			.pipe($.uglify())
 			.pipe(strip())
-			.pipe($.rename({
-                suffix: '.min'
-            }))
+			// .pipe($.rename({
+            //     suffix: '.min'
+            // }))
 			.pipe(gulp.dest('./dist/js'));
 	});
 };
