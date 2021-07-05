@@ -4,13 +4,14 @@
  *
  * @package LIFT Creations 
  * @subpackage Theme by Nguyen Pham
+ * https://baonguyenyam.github.io/cv
  * @since 2021
  */
 
 /**
  * Adds custom classes to the array of body classes.
  *
- * @since Twenty Twenty-One 1.0
+ * @since LIFT Theme 1.0
  *
  * @param array $classes Classes for the body element.
  *
@@ -42,7 +43,7 @@ add_filter( 'body_class', 'lift_body_classes' );
 /**
  * Adds custom class to the array of posts classes.
  *
- * @since Twenty Twenty-One 1.0
+ * @since LIFT Theme 1.0
  *
  * @param array $classes An array of CSS classes.
  *
@@ -58,7 +59,7 @@ add_filter( 'post_class', 'lift_post_classes', 10, 3 );
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  *
- * @since Twenty Twenty-One 1.0
+ * @since LIFT Theme 1.0
  *
  * @return void
  */
@@ -72,7 +73,7 @@ add_action( 'wp_head', 'lift_pingback_header' );
 /**
  * Remove the `no-js` class from body if JS is supported.
  *
- * @since Twenty Twenty-One 1.0
+ * @since LIFT Theme 1.0
  *
  * @return void
  */
@@ -84,7 +85,7 @@ add_action( 'wp_footer', 'lift_supports_js' );
 /**
  * Changes comment form default fields.
  *
- * @since Twenty Twenty-One 1.0
+ * @since LIFT Theme 1.0
  *
  * @param array $defaults The form defaults.
  *
@@ -102,7 +103,7 @@ add_filter( 'comment_form_defaults', 'lift_comment_form_defaults' );
 /**
  * Determines if post thumbnail can be displayed.
  *
- * @since Twenty Twenty-One 1.0
+ * @since LIFT Theme 1.0
  *
  * @return bool
  */
@@ -116,7 +117,7 @@ function lift_can_show_post_thumbnail() {
 /**
  * Returns the size for avatars used in the theme.
  *
- * @since Twenty Twenty-One 1.0
+ * @since LIFT Theme 1.0
  *
  * @return int
  */
@@ -165,7 +166,7 @@ if ( ! function_exists( 'lift_post_title' ) ) {
 	/**
 	 * Add a title to posts and pages that are missing titles.
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT Theme 1.0
 	 *
 	 * @param string $title The title.
 	 *
@@ -180,7 +181,7 @@ add_filter( 'the_title', 'lift_post_title' );
 /**
  * Gets the SVG code for a given icon.
  *
- * @since Twenty Twenty-One 1.0
+ * @since LIFT Theme 1.0
  *
  * @param string $group The icon group.
  * @param string $icon The icon.
@@ -189,7 +190,7 @@ add_filter( 'the_title', 'lift_post_title' );
  * @return string
  */
 function lift_get_icon_svg( $group, $icon, $size = 24 ) {
-	return Twenty_Twenty_One_SVG_Icons::get_svg( $group, $icon, $size );
+	return LIFT_Theme_SVG_Icons::get_svg( $group, $icon, $size );
 }
 
 /**
@@ -324,7 +325,7 @@ function lift_get_non_latin_css( $type = 'front-end' ) {
 /**
  * Print the first instance of a block in the content, and then break away.
  *
- * @since Twenty Twenty-One 1.0
+ * @since LIFT Theme 1.0
  *
  * @param string      $block_name The full block type name, or a partial match.
  *                                Example: `core/image`, `core-embed/*`.
@@ -387,7 +388,7 @@ function lift_print_first_instance_of_block( $block_name, $content = null, $inst
 /**
  * Retrieve protected post password form content.
  *
- * @since Twenty Twenty-One 1.0
+ * @since LIFT Theme 1.0
  *
  * @param int|WP_Post $post Optional. Post ID or WP_Post object. Default is global $post.
  * @return string HTML content for password form for password protected post.
@@ -406,7 +407,7 @@ add_filter( 'the_password_form', 'lift_password_form' );
 /**
  * Filters the list of attachment image attributes.
  *
- * @since Twenty Twenty-One 1.0
+ * @since LIFT Theme 1.0
  *
  * @param array        $attr       Array of attribute values for the image markup, keyed by attribute name.
  *                                 See wp_get_attachment_image().

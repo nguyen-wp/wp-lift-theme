@@ -1,0 +1,19 @@
+// SCROLL BAR 
+::-webkit-scrollbar {
+	-webkit-appearance: none;
+}
+::-webkit-scrollbar {
+	height: 10px;
+	width: 10px;
+}
+::-webkit-scrollbar-track {
+	background: var(--lift-theme-texthover);
+}
+::-webkit-scrollbar-thumb {
+	background: var(--lift-theme-gray);
+	height: 100px;
+	border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: var(--lift-theme-main);
+}

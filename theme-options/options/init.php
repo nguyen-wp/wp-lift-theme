@@ -1,4 +1,11 @@
 <?php
+/**
+* @package LIFT Creations 
+* @subpackage Theme by Nguyen Pham
+* https://baonguyenyam.github.io/cv
+* @since 2021
+*/
+
 use ScssPhp\ScssPhp\Compiler;
 
 add_action('redux/options/' . $opt_name . '/saved',  "lift_compiler_sass"  );
@@ -11,7 +18,7 @@ add_action('redux/options/' . $opt_name . '/saved',  "lift_save_js"  );
 			global $wp_filesystem;
 			global $lift_theme;
 		
-			$filename = dirname(__DIR__) .'/../dist/css/style.css';
+			$filename = get_template_directory() . '/dist/css/style.css';
 
 			if( empty( $wp_filesystem ) ) {
 				require_once( ABSPATH .'/wp-admin/includes/file.php' );
@@ -45,7 +52,7 @@ add_action('redux/options/' . $opt_name . '/saved',  "lift_save_js"  );
 			global $wp_filesystem;
 			global $lift_theme;
 
-			$filename = dirname(__DIR__) .'/../dist/css/export.css';
+			$filename = get_template_directory() . '/dist/css/export.css';
 		
 			if( empty( $wp_filesystem ) ) {
 				require_once( ABSPATH .'/wp-admin/includes/file.php' );
@@ -67,7 +74,7 @@ add_action('redux/options/' . $opt_name . '/saved',  "lift_save_js"  );
 			global $wp_filesystem;
 			global $lift_theme;
 
-			$filename = dirname(__DIR__) .'/../dist/css/theme.css';
+			$filename = get_template_directory() . '/dist/css/theme.css';
 		
 			if( empty( $wp_filesystem ) ) {
 				require_once( ABSPATH .'/wp-admin/includes/file.php' );
@@ -98,7 +105,7 @@ add_action('redux/options/' . $opt_name . '/saved',  "lift_save_js"  );
 			global $wp_filesystem;
 			global $lift_theme;
 
-			$filename = dirname(__DIR__) .'/../dist/js/theme.js';
+			$filename = get_template_directory() . '/dist/js/theme.js';
 		
 			if( empty( $wp_filesystem ) ) {
 				require_once( ABSPATH .'/wp-admin/includes/file.php' );

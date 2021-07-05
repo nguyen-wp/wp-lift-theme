@@ -4,13 +4,13 @@
  *
  * @package LIFT Creations 
  * @subpackage Theme by Nguyen Pham
+ * https://baonguyenyam.github.io/cv
  * @since 2021
  */
 
 global $lift_theme;
 $footer_value['footer_col'] = $lift_theme['lift-theme-footer-columns'];
-$footer_value['footer_style'] = $lift_theme['lift-theme-layout-style'];
-$footer_value['footer_size'] = $lift_theme['lift-theme-layout-size'];
+$footer_value['footer_style'] = $lift_theme['lift-theme-footer-layout-style'];
 $footer_value['footer_row'] = $lift_theme['lift-theme-footer-row-option'];
 $footer_value['footer_gutters'] = $lift_theme['lift-theme-footer-columns-gutters'];
 $footer_value['footer_column_1'] = trim($lift_theme['lift-theme-footer-columns-1']);
@@ -49,14 +49,14 @@ if(isset($lift_theme['lift-theme-footer-row-spacing'])) {
 ?>
 
 <?php if(is_active_sidebar('sidebar-1')) {?>
-<footer id="footer" class="footer">
+<footer id="footer" class="footer lift-footer">
 	<div class="container<?= isset($footer_value['footer_style']) && $footer_value['footer_style'] === '1' ? '-fluid': ''?>">
 		<div class="row<?= isset($footer_value['footer_gutters']) && $footer_value['footer_gutters'] !== '-1' ? ' gx-'.$footer_value['footer_gutters'] : ''?>"<?= isset($footer_value['footer_row']) && $footer_value['footer_row'] === '1' ? $build_footer_spacing : ''?>>
 			<?php
 				for ($i=1; $i <= $footer_value['footer_col'] ; $i++) { 
 			?>
 				<?php if(is_active_sidebar( 'sidebar-'.$i )) {?>
-					<div class="col <?=$footer_value['footer_column_'.$i]?>"><?php dynamic_sidebar( 'sidebar-'.$i ); ?></div>
+					<div class="col-12 <?=$footer_value['footer_column_'.$i]?>"><?php dynamic_sidebar( 'sidebar-'.$i ); ?></div>
 				<?php } ?>
 			<?php
 				}
@@ -66,4 +66,3 @@ if(isset($lift_theme['lift-theme-footer-row-spacing'])) {
 </footer>
 <?php } ?>
 
-<?=var_dump($lift_theme);?>

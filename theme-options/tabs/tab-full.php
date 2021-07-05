@@ -1,5 +1,12 @@
 <?php
-    // -> START Basic Fields
+/**
+* @package LIFT Creations 
+* @subpackage Theme by Nguyen Pham
+* https://baonguyenyam.github.io/cv
+* @since 2021
+*/
+
+	// -> START Basic Fields
     Redux::setSection( $opt_name, array(
         'title'            => __( 'Basic Fields', 'lift-theme-options' ),
         'id'               => 'basic',

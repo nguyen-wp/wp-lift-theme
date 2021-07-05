@@ -1,4 +1,11 @@
 <?php
+/**
+* @package LIFT Creations 
+* @subpackage Theme by Nguyen Pham
+* https://baonguyenyam.github.io/cv
+* @since 2021
+*/
+
     /**
      * ---> SET ARGUMENTS
      * For full documentation on arguments, please refer to: https://github.com/ReduxFramework/ReduxFramework/wiki/Arguments
@@ -148,27 +155,3 @@ Redux::setArgs( $opt_name, $args );
 ////////////////////////////////////////////////////////////////////////
 // MORE OPTION 
 ////////////////////////////////////////////////////////////////////////
-
-// Background Patterns Reader
-$lift_patterns_path =  'theme-options/patterns/';
-$lift_patterns_url  =  'theme-options/patterns/';
-$lift_patterns      = array();
-
-if ( is_dir( $lift_patterns_path ) ) {
-
-	if ( $lift_patterns_dir = opendir( $lift_patterns_path ) ) {
-		$lift_patterns = array();
-
-		while ( ( $lift_patterns_file = readdir( $lift_patterns_dir ) ) !== false ) {
-
-			if ( stristr( $lift_patterns_file, '.png' ) !== false || stristr( $lift_patterns_file, '.jpg' ) !== false ) {
-				$name              = explode( '.', $lift_patterns_file );
-				$name              = str_replace( '.' . end( $name ), '', $lift_patterns_file );
-				$lift_patterns[] = array(
-					'alt' => $name,
-					'img' => $lift_patterns_url . $lift_patterns_file
-				);
-			}
-		}
-	}
-}

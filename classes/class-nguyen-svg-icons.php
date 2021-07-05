@@ -4,6 +4,7 @@
  *
  * @package LIFT Creations 
  * @subpackage Theme by Nguyen Pham
+ * https://baonguyenyam.github.io/cv
  * @since 2021
  */
 
@@ -19,7 +20,7 @@
  *
  * @since LIFT 2021
  */
-class Twenty_Twenty_One_SVG_Icons {
+class LIFT_Theme_SVG_Icons {
 
 	/**
 	 * User Interface icons – svg sources.
@@ -169,7 +170,7 @@ class Twenty_Twenty_One_SVG_Icons {
 		}
 
 		/**
-		 * Filters Twenty Twenty-Ones's array of icons.
+		 * Filters LIFT Themes's array of icons.
 		 *
 		 * The dynamic portion of the hook name, `$group`, refers to
 		 * the name of the group of icons, either "ui" or "social".
@@ -212,7 +213,7 @@ class Twenty_Twenty_One_SVG_Icons {
 			$regex_map = array();
 
 			/**
-			 * Filters Twenty Twenty-Ones's array of domain mappings for social icons.
+			 * Filters LIFT Themes's array of domain mappings for social icons.
 			 *
 			 * By default, each Icon ID is matched against a .com TLD. To override this behavior,
 			 * specify all the domains it covers (including the .com TLD too, if applicable).
@@ -224,7 +225,7 @@ class Twenty_Twenty_One_SVG_Icons {
 			$map = apply_filters( 'lift_social_icons_map', self::$social_icons_map );
 
 			/**
-			 * Filters Twenty Twenty-One's array of social icons.
+			 * Filters LIFT Theme's array of social icons.
 			 *
 			 * @since LIFT 2021
 			 *

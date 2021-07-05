@@ -1,11 +1,12 @@
 <?php
 /**
- * Twenty Twenty-One Starter Content
+ * LIFT Theme Starter Content
  *
  * @link https://make.wordpress.org/core/2016/11/30/starter-content-for-themes-in-4-7/
  *
  * @package LIFT Creations 
  * @subpackage Theme by Nguyen Pham
+ * https://baonguyenyam.github.io/cv
  * @since 2021
  */
 
@@ -14,7 +15,7 @@
  *
  * Passes it through the `lift_starter_content` filter before returning.
  *
- * @since Twenty Twenty-One 1.0
+ * @since LIFT Theme 1.0
  *
  * @return array A filtered array of args for the starter_content.
  */
@@ -37,8 +38,8 @@ function lift_get_starter_content() {
 					<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
 					<!-- /wp:spacer -->
 
-					<!-- wp:columns {"verticalAlignment":"center","align":"wide","className":"is-style-twentytwentyone-columns-overlap"} -->
-					<div class="wp-block-columns alignwide are-vertically-aligned-center is-style-twentytwentyone-columns-overlap"><!-- wp:column {"verticalAlignment":"center"} -->
+					<!-- wp:columns {"verticalAlignment":"center","align":"wide","className":"is-style-lifttheme-columns-overlap"} -->
+					<div class="wp-block-columns alignwide are-vertically-aligned-center is-style-lifttheme-columns-overlap"><!-- wp:column {"verticalAlignment":"center"} -->
 					<div class="wp-block-column is-vertically-aligned-center"><!-- wp:image {"align":"full","sizeSlug":"large"} -->
 					<figure class="wp-block-image alignfull size-large"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/roses-tremieres-hollyhocks-1884.jpg" alt="' . esc_attr__( '&#8220;Roses Trémières&#8221; by Berthe Morisot', 'wp-lift-theme' ) . '"/></figure>
 					<!-- /wp:image -->
@@ -47,8 +48,8 @@ function lift_get_starter_content() {
 					<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
 					<!-- /wp:spacer -->
 
-					<!-- wp:image {"align":"full","sizeSlug":"large","className":"is-style-twentytwentyone-image-frame"} -->
-					<figure class="wp-block-image alignfull size-large is-style-twentytwentyone-image-frame"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/in-the-bois-de-boulogne.jpg" alt="' . esc_attr__( '&#8220;In the Bois de Boulogne&#8221; by Berthe Morisot', 'wp-lift-theme' ) . '"/></figure>
+					<!-- wp:image {"align":"full","sizeSlug":"large","className":"is-style-lifttheme-image-frame"} -->
+					<figure class="wp-block-image alignfull size-large is-style-lifttheme-image-frame"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/in-the-bois-de-boulogne.jpg" alt="' . esc_attr__( '&#8220;In the Bois de Boulogne&#8221; by Berthe Morisot', 'wp-lift-theme' ) . '"/></figure>
 					<!-- /wp:image --></div>
 					<!-- /wp:column -->
 
@@ -57,8 +58,8 @@ function lift_get_starter_content() {
 					<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
 					<!-- /wp:spacer -->
 
-					<!-- wp:image {"sizeSlug":"large","className":"alignfull size-full is-style-twentytwentyone-border"} -->
-					<figure class="wp-block-image size-large alignfull size-full is-style-twentytwentyone-border"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/young-woman-in-mauve.jpg" alt="' . esc_attr__( '&#8220;Young Woman in Mauve&#8221; by Berthe Morisot', 'wp-lift-theme' ) . '"/></figure>
+					<!-- wp:image {"sizeSlug":"large","className":"alignfull size-full is-style-lifttheme-border"} -->
+					<figure class="wp-block-image size-large alignfull size-full is-style-lifttheme-border"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/young-woman-in-mauve.jpg" alt="' . esc_attr__( '&#8220;Young Woman in Mauve&#8221; by Berthe Morisot', 'wp-lift-theme' ) . '"/></figure>
 					<!-- /wp:image --></div>
 					<!-- /wp:column --></div>
 					<!-- /wp:columns -->
@@ -84,7 +85,7 @@ function lift_get_starter_content() {
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->
-					<p>' . esc_html_x( 'Twenty Twenty-One includes stylish borders for your content. With an Image block selected, open the "Styles" panel within the Editor sidebar. Select the "Frame" block style to activate it.', 'Theme starter content', 'wp-lift-theme' ) . '</p>
+					<p>' . esc_html_x( 'LIFT Theme includes stylish borders for your content. With an Image block selected, open the "Styles" panel within the Editor sidebar. Select the "Frame" block style to activate it.', 'Theme starter content', 'wp-lift-theme' ) . '</p>
 					<!-- /wp:paragraph --></div>
 					<!-- /wp:column -->
 
@@ -94,7 +95,7 @@ function lift_get_starter_content() {
 					<!-- /wp:heading -->
 
 					<!-- wp:paragraph -->
-					<p>' . esc_html_x( 'Twenty Twenty-One also includes an overlap style for column blocks. With a Columns block selected, open the "Styles" panel within the Editor sidebar. Choose the "Overlap" block style to try it out.', 'Theme starter content', 'wp-lift-theme' ) . '</p>
+					<p>' . esc_html_x( 'LIFT Theme also includes an overlap style for column blocks. With a Columns block selected, open the "Styles" panel within the Editor sidebar. Choose the "Overlap" block style to try it out.', 'Theme starter content', 'wp-lift-theme' ) . '</p>
 					<!-- /wp:paragraph --></div>
 					<!-- /wp:column --></div>
 					<!-- /wp:columns -->
@@ -103,8 +104,8 @@ function lift_get_starter_content() {
 					<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
 					<!-- /wp:spacer -->
 
-					<!-- wp:cover {"overlayColor":"green","contentPosition":"center center","align":"wide","className":"is-style-twentytwentyone-border"} -->
-					<div class="wp-block-cover alignwide has-green-background-color has-background-dim is-style-twentytwentyone-border"><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":20} -->
+					<!-- wp:cover {"overlayColor":"green","contentPosition":"center center","align":"wide","className":"is-style-lifttheme-border"} -->
+					<div class="wp-block-cover alignwide has-green-background-color has-background-dim is-style-lifttheme-border"><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":20} -->
 					<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
 					<!-- /wp:spacer -->
 
@@ -176,7 +177,7 @@ function lift_get_starter_content() {
 	/**
 	 * Filters the array of starter content.
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT Theme 1.0
 	 *
 	 * @param array $starter_content Array of starter content.
 	 */

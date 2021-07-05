@@ -1,5 +1,66 @@
 :root {
   --global--font-primary: var(--font-headings, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
-  --global--font-secondary: var(--font-base, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif); }
+  --global--font-secondary: var(--font-base, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
+  --lift-theme-main: #007bff;
+  --lift-theme-azure: #3a86ffff;
+  --lift-theme-yellow: #e0e000ff;
+  --lift-theme-mango: #ffbe0bff;
+  --lift-theme-dark-orange: #fd8a09ff;
+  --lift-theme-orange-pantone: #fb5607ff;
+  --lift-theme-red-salsa: #fd2b3bff;
+  --lift-theme-winter-sky: #ff006eff;
+  --lift-theme-blue-violet: #8338ecff;
+  --lift-theme-neon-blue: #5f5ff6ff;
+  --lift-theme-dark-green: #588157;
+  --lift-theme-caribbean-green: #06d6a0ff;
+  --lift-theme-green: #38b000;
+  --lift-theme-light-green: #70e000;
+  --lift-theme-sbg: #0f0f0f;
+  --lift-theme-bg: #18191a;
+  --lift-theme-box: #242526;
+  --lift-theme-box2: #2d2e2f;
+  --lift-theme-border: #1b1c1d;
+  --lift-theme-hover: #3a3b3c;
+  --lift-theme-muted: #575757;
+  --lift-theme-colorin: #848484;
+  --lift-theme-gray: #969696;
+  --lift-theme-texthover: #dfdfdf;
+  --lift-theme-white: #fff; }
+
+::-webkit-scrollbar {
+  -webkit-appearance: none; }
+
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px; }
+
+::-webkit-scrollbar-track {
+  background: var(--lift-theme-texthover); }
+
+::-webkit-scrollbar-thumb {
+  background: var(--lift-theme-gray);
+  height: 100px;
+  border-radius: 5px; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--lift-theme-main); }
+
+html, body {
+  overflow-x: hidden; }
+
+.lift-theme .vc_message_box-icon .fa, .lift-theme .vc_message_box-icon .fas {
+  font-weight: 900; }
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important; }
 
 /*# sourceMappingURL=main.css.map */

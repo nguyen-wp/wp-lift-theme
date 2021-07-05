@@ -1,7 +1,14 @@
 <?php
-    // -> START layout
+    /**
+* @package LIFT Creations 
+* @subpackage Theme by Nguyen Pham
+* https://baonguyenyam.github.io/cv
+* @since 2021
+*/
+
+// -> START layout
     Redux::setSection( $opt_name, array(
-        'title' => __( 'Web Layout', 'lift-theme-options' ),
+        'title' => __( 'Web layout', 'lift-theme-options' ),
         'icon'  => 'bi bi-columns-gap',
         'id'         => 'lift-theme-layout',
         'desc'       => __( 'For full documentation on this field, visit: ', 'lift-theme-options' ) . '<a href="//getbootstrap.com/docs/5.0/layout/containers/" target="_blank">getbootstrap.com/docs/5.0/layout/containers/</a>',

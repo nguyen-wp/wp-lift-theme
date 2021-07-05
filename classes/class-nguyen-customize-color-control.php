@@ -4,6 +4,7 @@
  *
  * @package LIFT Creations 
  * @subpackage Theme by Nguyen Pham
+ * https://baonguyenyam.github.io/cv
  * @since 2021
  */
 
@@ -14,7 +15,7 @@
  *
  * @see WP_Customize_Control
  */
-class Twenty_Twenty_One_Customize_Color_Control extends WP_Customize_Color_Control {
+class LIFT_Theme_Customize_Color_Control extends WP_Customize_Color_Control {
 	/**
 	 * The control type.
 	 *
@@ -48,13 +49,13 @@ class Twenty_Twenty_One_Customize_Color_Control extends WP_Customize_Color_Contr
 		parent::enqueue();
 
 		// Enqueue the script.
-		wp_enqueue_script(
-			'twentytwentyone-control-color',
-			get_theme_file_uri( 'assets/js/palette-colorpicker.js' ),
-			array( 'customize-controls', 'jquery', 'customize-base', 'wp-color-picker' ),
-			(string) filemtime( get_theme_file_path( 'assets/js/palette-colorpicker.js' ) ),
-			false
-		);
+		// wp_enqueue_script(
+		// 	'lifttheme-control-color',
+		// 	get_theme_file_uri( 'assets/js/palette-colorpicker.js' ),
+		// 	array( 'customize-controls', 'jquery', 'customize-base', 'wp-color-picker' ),
+		// 	(string) filemtime( get_theme_file_path( 'assets/js/palette-colorpicker.js' ) ),
+		// 	false
+		// );
 	}
 
 	/**
@@ -62,7 +63,7 @@ class Twenty_Twenty_One_Customize_Color_Control extends WP_Customize_Color_Contr
 	 *
 	 * @access public
 	 *
-	 * @since Twenty Twenty-One 1.0
+	 * @since LIFT Theme 1.0
 	 *
 	 * @uses WP_Customize_Control::to_json()
 	 *

@@ -1,9 +1,10 @@
 <?php
 /**
- * Customize API: Twenty_Twenty_One_Customize_Notice_Control class
+ * Customize API: LIFT_Theme_Customize_Notice_Control class
  *
  * @package LIFT Creations 
  * @subpackage Theme by Nguyen Pham
+ * https://baonguyenyam.github.io/cv
  * @since 2021
  */
 
@@ -14,7 +15,7 @@
  *
  * @see WP_Customize_Control
  */
-class Twenty_Twenty_One_Customize_Notice_Control extends WP_Customize_Control {
+class LIFT_Theme_Customize_Notice_Control extends WP_Customize_Control {
 	/**
 	 * The control type.
 	 *

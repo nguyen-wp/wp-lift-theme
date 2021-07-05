@@ -4,13 +4,14 @@
  *
  * @package LIFT Creations 
  * @subpackage Theme by Nguyen Pham
+ * https://baonguyenyam.github.io/cv
  * @since 2021
  */
 
 ?>
-			</main><!-- #main -->
+			</div><!-- #main -->
 		</div><!-- #primary -->
-	</div><!-- #content -->
+</main><!-- #content -->
 
 	<?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
 

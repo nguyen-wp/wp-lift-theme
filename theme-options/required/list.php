@@ -1,4 +1,10 @@
 <?php
+/**
+* @package LIFT Creations 
+* @subpackage Theme by Nguyen Pham
+* https://baonguyenyam.github.io/cv
+* @since 2021
+*/
 
 add_action( 'tgmpa_register', 'lift_theme_options_register_required_plugins' );
 
@@ -37,7 +43,7 @@ function lift_theme_options_register_required_plugins() {
 			'slug'               => 'wp-lift-blocks', // The plugin slug (typically the folder name).
 			'source'             => get_template_directory() . '/plugins/wp-lift-blocks.zip', // The plugin source.
 			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
-			'version'            => '2.2.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'version'            => '1.0.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
 			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
 			'external_url'       => 'https://github.com/nguyen-wp/wp-lift-blocks', // If set, overrides default API URL and points to an external URL.

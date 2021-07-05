@@ -1,4 +1,10 @@
 <?php
+/**
+* @package LIFT Creations 
+* @subpackage Theme by Nguyen Pham
+* https://baonguyenyam.github.io/cv
+* @since 2021
+*/
 
     // -> START Header
     Redux::setSection( $opt_name, array(
@@ -21,6 +27,43 @@
             ),
 		)
 	));
+
+	Redux::setSection( $opt_name, array(
+        'title' => __( 'Header layout', 'lift-theme-options' ),
+        'id'         => 'lift-theme-header-layout',
+        'subsection' => true,
+		'fields'     => array(
+			array(
+				'id'       => 'lift-theme-header-layout-style',
+                'type'     => 'switch',
+                'title'    => __( 'Containers', 'lift-theme-options' ),
+                'subtitle' => __( 'Containers are a fundamental building block of Bootstrap that contain, pad, and align your content within a given device or viewport.', 'lift-theme-options' ),
+                'default'  => 0,
+                'on'       => 'Fullwidth',
+                'off'      => 'Boxed',
+            ),
+			array(
+				'id'       => 'lift-theme-header-layout-size',
+                'type'     => 'switch',
+                'required' => array( 'lift-theme-header-layout-style', '=', '1' ),
+                'title'    => __( 'Max width container', 'lift-theme-options' ),
+                'default'  => 0,
+                'on'       => 'On',
+                'off'      => 'Off',
+            ),
+			array(
+				'id'       => 'lift-theme-header-layout-size-value',
+				'type'          => 'slider',
+                'required' => array( 'lift-theme-header-layout-size', '=', '1' ),
+				'title'         => __( 'Bootstrap comes with three different containers', 'lift-theme-options' ),
+				'min'           => 960,
+				'step'          => 20,
+				'default'       => 1140,
+				'max'           => 1820,
+				'display_value' => 'text'
+			),
+		),
+    ) );
 
 	Redux::setSection( $opt_name, array(
 		'title'      => __( 'Header style', 'lift-theme-options' ),
@@ -99,7 +142,21 @@
 					'visited'  => '#8224e3',  // purple
 				)
             ),
+			array(
+				'id'       => 'lift-theme-header-shadow',
+                'type'     => 'select',
+                'title'    => __( 'Shadows', 'lift-theme-options' ),
+                'subtitle' => __( 'Add or remove shadows to elements with box-shadow utilities.', 'lift-theme-options' ),
+                'options'  => array(
+					'default'       => 'Default', 
+					'shadow-none'       => 'No shadow', 
+					'shadow-sm'       => 'Small shadow', 
+					'shadow'       => 'Regular shadow', 
+					'shadow-lg'       => 'Larger shadow', 
+				),
+				'default'         => 'default'
+            ),
+
+
 		)
 	));
-
-    

@@ -6,10 +6,8 @@ module.exports = function (gulp, $, browserSync) {
 				// 'bower_components/popper.js/dist/umd/popper.min.js',
 				// 'bower_components/bootstrap/dist/js/bootstrap.min.js',
 				// Phần Plugins
-				// 'bower_components/owl.carousel/dist/owl.carousel.min.js',
-				// 'bower_components/fancybox/dist/jquery.fancybox.min.js',
-				// 'bower_components/particles.js/particles.min.js',
-				// 'bower_components/typed.js/lib/typed.min.js',
+				'bower_components/owl.carousel/dist/owl.carousel.min.js',
+				'bower_components/fancybox/dist/jquery.fancybox.min.js',
 			])
 			.pipe($.concat('lift.js'))
 			.pipe(gulp.dest('./dist/js'));
