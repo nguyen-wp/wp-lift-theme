@@ -1,4 +1,4 @@
-=== Theme Name ===
+# Theme Name
 Theme Name: WP LIFT Creations Theme
 Theme URI: https://github.com/nguyen-wp/lift-theme
 Author: Nguyen Pham
