@@ -24,6 +24,7 @@ require_once 'tabs/tab-footer.php';
 require_once 'tabs/tab-blog.php';
 require_once 'tabs/tab-typography.php';
 require_once 'tabs/tab-social.php';
+require_once 'tabs/tab-license.php';
 // require_once 'tabs/tab-full.php'; // This one for demo 
 // CALL ACTION 
 require_once 'options/helps.php';

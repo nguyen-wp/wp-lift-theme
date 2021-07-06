@@ -122,36 +122,38 @@ if ( ! class_exists( 'LIFT_Theme_Customize' ) ) {
 				)
 			);
 
-			// Background color.
-			// Include the custom control class.
-			include_once get_theme_file_path( 'classes/class-nguyen-customize-color-control.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+			// // Background color.
+			// // Include the custom control class.
+			// include_once get_theme_file_path( 'classes/class-nguyen-customize-color-control.php' ); // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
-			// Register the custom control.
-			$wp_customize->register_control_type( 'LIFT_Theme_Customize_Color_Control' );
+			// // Register the custom control.
+			// $wp_customize->register_control_type( 'LIFT_Theme_Customize_Color_Control' );
 
-			// Get the palette from theme-supports.
-			$palette = get_theme_support( 'editor-color-palette' );
+			// // Get the palette from theme-supports.
+			// $palette = get_theme_support( 'editor-color-palette' );
 
-			// Build the colors array from theme-support.
-			$colors = array();
-			if ( isset( $palette[0] ) && is_array( $palette[0] ) ) {
-				foreach ( $palette[0] as $palette_color ) {
-					$colors[] = $palette_color['color'];
-				}
-			}
+			// // Build the colors array from theme-support.
+			// $colors = array();
+			// if ( isset( $palette[0] ) && is_array( $palette[0] ) ) {
+			// 	foreach ( $palette[0] as $palette_color ) {
+			// 		$colors[] = $palette_color['color'];
+			// 	}
+			// }
 
-			// Add the control. Overrides the default background-color control.
-			$wp_customize->add_control(
-				new LIFT_Theme_Customize_Color_Control(
-					$wp_customize,
-					'background_color',
-					array(
-						'label'   => esc_html_x( 'Background color', 'Customizer control', 'wp-lift-theme' ),
-						'section' => 'colors',
-						'palette' => $colors,
-					)
-				)
-			);
+			// // Add the control. Overrides the default background-color control.
+			// $wp_customize->add_control(
+			// 	new LIFT_Theme_Customize_Color_Control(
+			// 		$wp_customize,
+			// 		'background_color',
+			// 		array(
+			// 			'label'   => esc_html_x( 'Background color', 'Customizer control', 'wp-lift-theme' ),
+			// 			'section' => 'colors',
+			// 			'palette' => $colors,
+			// 		)
+			// 	)
+			// );
+
+			
 		}
 
 		/**

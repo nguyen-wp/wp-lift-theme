@@ -142,20 +142,8 @@ class LIFT_Theme_Custom_Colors {
 	 * @return array
 	 */
 	public function body_class( $classes ) {
-		$background_color = get_theme_mod( 'background_color', 'D1E4DD' );
-		$luminance        = self::get_relative_luminance_from_hex( $background_color );
-
+		
 		$classes[] = 'lift-theme';
-
-		if ( 127 > $luminance ) {
-			$classes[] = 'is-dark-theme';
-		} else {
-			$classes[] = 'is-light-theme';
-		}
-
-		if ( 225 <= $luminance ) {
-			$classes[] = 'has-background-white';
-		}
 
 		return $classes;
 	}

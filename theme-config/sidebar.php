@@ -14,6 +14,7 @@ function lift_widgets_init() {
 	global $lift_theme;
 
 	$get_footer_columns = isset($lift_theme['lift-theme-footer-columns']) ? $lift_theme['lift-theme-footer-columns'] : 1;
+	$tags = isset($lift_theme['lift-theme-footer-function-tags']) ? $lift_theme['lift-theme-footer-function-tags'] :  'h2';
 
 	for ($i=1; $i <= $get_footer_columns ; $i++) { 
 		register_sidebar(
@@ -23,8 +24,8 @@ function lift_widgets_init() {
 				'description'   => esc_html__( 'Add widgets here to appear in your footer.', 'wp-lift-theme' ),
 				'before_widget' => '<section id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</section>',
-				'before_title'  => '<h2 class="widget-title">',
-				'after_title'   => '</h2>',
+				'before_title'  => '<'.$tags.' class="widget-title">',
+				'after_title'   => '</'.$tags.'>',
 			)
 		);
 	}

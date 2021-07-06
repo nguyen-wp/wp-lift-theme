@@ -25,8 +25,18 @@
                 'options'  => array(
 					'default'       => 'Default', 
 					'modern'       => 'Modern', 
+					'material'       => 'Material', 
+					'monokai'       => 'Monokai', 
 				),
 				'default'         => 'default'
+            ),
+			array(
+				'id'       => 'lift-theme-global-style-theme-dark',
+                'type'     => 'switch',
+                'title'    => __( 'Dark mode', 'lift-theme-options' ),
+                'default'  => 0,
+                'on'       => 'On',
+                'off'      => 'Off',
             ),
 			
 		),

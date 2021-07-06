@@ -9,7 +9,10 @@
 function lift_styles() {
 	// Note, the is_IE global variable is defined by WordPress and is used
 	// to detect if the current browser is internet explorer.
-	global $is_IE, $wp_scripts;
+	global $is_IE, $wp_scripts, $lift_theme;
+
+	// LAYOUT 
+	$theme_value['theme_style'] = $lift_theme['lift-theme-global-style-theme'];
 
 	// RTL styles.
 	wp_style_add_data( 'lift-assets-style', 'rtl', 'replace' );
@@ -27,6 +30,29 @@ function lift_styles() {
 		array(), 
 		wp_get_theme()->get( 'Version' ), 'all' 
 	);
+	// THEME SKIN
+	if ( $theme_value['theme_style'] === 'modern' ) {
+		wp_enqueue_style(
+			'lift-assets-theme-modern-style', 
+			get_template_directory_uri() . '/dist/css/theme-modern.css', 
+			array(), 
+			wp_get_theme()->get( 'Version' ), 'all' 
+		);
+	} else if ( $theme_value['theme_style'] === 'material' ) {
+		wp_enqueue_style(
+			'lift-assets-theme-material-style', 
+			get_template_directory_uri() . '/dist/css/theme-material.css', 
+			array(), 
+			wp_get_theme()->get( 'Version' ), 'all' 
+		);
+	} else if ( $theme_value['theme_style'] === 'monokai' ) {
+		wp_enqueue_style(
+			'lift-assets-theme-monokai-style', 
+			get_template_directory_uri() . '/dist/css/theme-monokai.css', 
+			array(), 
+			wp_get_theme()->get( 'Version' ), 'all' 
+		);
+	}
 	wp_enqueue_style(
 		'lift-assets-theme-style', 
 		get_template_directory_uri() . '/dist/css/theme.css', 
@@ -53,7 +79,7 @@ function lift_styles() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'lift_styles' );
+add_action( 'wp_enqueue_scripts', 'lift_styles' , 999999 );
 
 function lift_admin_styles() {
 	// Styles.

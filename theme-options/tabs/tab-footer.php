@@ -170,7 +170,7 @@
                 'id'       => 'lift-theme-footer-columns',
                 'type'     => 'image_select',
                 'title'    => __( 'Footer columns', 'lift-theme-options' ),
-                'subtitle' => __( 'How many columns du you need?', 'lift-theme-options' ),
+                'subtitle' => __( 'How many columns do you need?', 'lift-theme-options' ),
                 'desc'     => __( 'Number of columns', 'lift-theme-options' ),
                 //Must provide key => value(array:title|img) pairs for radio options
                 'options'  => array(
@@ -340,4 +340,25 @@
 		
 	));
 	
-	
+	Redux::setSection( $opt_name, array(
+        'title'      => __( 'Footer Tags', 'lift-theme-options' ),
+        'id'         => 'lift-theme-footer-function',
+        'subsection' => true,
+		'fields'     => array(
+			array(
+				'id'       => 'lift-theme-footer-function-tags',
+                'type'     => 'select',
+                'title'    => __( 'Title Tags', 'lift-theme-options' ),
+                'options'  => array(
+					'h2'       => 'H2', 
+					'h3'       => 'H3', 
+					'h4'       => 'H4', 
+					'h5'       => 'H5', 
+					'h6'       => 'H6', 
+					'p'       => 'p', 
+					'div'       => 'div', 
+				),
+				'default'         => 'h2'
+            ),
+		)
+	));
