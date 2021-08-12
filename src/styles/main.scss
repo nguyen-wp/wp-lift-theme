@@ -1,26 +1,19 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import 'config/inc/form';
+////////////////////////////////////// 
 @import 'config/global';
-@import 'config/scrollbar';
+@import 'config/header';
+@import 'config/footer';
+@import 'config/backtotop';
+@import 'config/vc_composer';
+@import 'config/search';
+@import 'config/pagination';
+@import 'config/comments';
+@import 'config/sidebar';
+@import 'config/blog';
+@import 'config/page';
 
-html, body {
-	overflow-x: hidden;
-}
-.lift-theme {
-	.vc_message_box-icon {
-		.fa, .fas {
-			font-weight: 900;
-		}
-	}
-}
 
-.screen-reader-text {
-    border: 0;
-    clip: rect(1px, 1px, 1px, 1px);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute!important;
-    width: 1px;
-    word-wrap: normal !important;
-}
+

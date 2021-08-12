@@ -52,7 +52,7 @@
 				'title'         => __( 'Bootstrap comes with three different containers', 'lift-theme-options' ),
 				'min'           => 960,
 				'step'          => 20,
-				'default'       => 1140,
+				'default'       => 1320,
 				'max'           => 1820,
 				'display_value' => 'text'
 			),
@@ -114,7 +114,7 @@
 				'title'    => __('Footer links', 'lift-theme-options'),
 				'subtitle' => __('Only color validation can be done on this field type', 'lift-theme-options'),
 				'default'  => array(
-					'regular'  => '#1e73be', // blue
+					'regular'  => '#007bff', // blue
 					'hover'    => '#dd3333', // red
 					'active'   => '#8224e3',  // purple
 					'visited'  => '#8224e3',  // purple
@@ -150,10 +150,7 @@
                 'subtitle'       => __( 'Allow your users to choose the spacing or margin they want.', 'lift-theme-options' ),
                 'desc'           => __( 'You can enable or disable any piece of this field. Top, Right, Bottom, Left, or Units.', 'lift-theme-options' ),
                 'default'        => array(
-                    'margin-top'    => '1px',
-                    'margin-right'  => '2px',
-                    'margin-bottom' => '3px',
-                    'margin-left'   => '4px'
+                    'units'     => 'em'
                 )
             ),
 		)
@@ -358,7 +355,7 @@
 					'p'       => 'p', 
 					'div'       => 'div', 
 				),
-				'default'         => 'h2'
+				'default'         => 'h4'
             ),
 		)
 	));

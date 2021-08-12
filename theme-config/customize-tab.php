@@ -6,6 +6,8 @@ function lift_disable_customize_register() {
 	$wp_customize->remove_panel( 'lift-theme-footer' );  //Modify this line as needed  
 	$wp_customize->remove_panel( 'lift-theme-global' );  //Modify this line as needed  
 	$wp_customize->remove_panel( 'lift-theme-blog' );  //Modify this line as needed  
+	$wp_customize->remove_panel( 'lift-theme-layout' );  //Modify this line as needed  
+	$wp_customize->remove_panel( 'lift-theme-search' );  //Modify this line as needed  
 	$wp_customize->remove_section( 'lift-theme-social-media' );  //Modify this line as needed  
 	// $wp_customize->remove_section( 'background_image' );  //Modify this line as needed  
 	// $wp_customize->remove_section( 'colors' );  //Modify this line as needed  

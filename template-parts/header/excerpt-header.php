@@ -13,6 +13,8 @@ $post_format = get_post_format();
 if ( 'aside' === $post_format || 'status' === $post_format ) {
 	return;
 }
+global $lift_theme;
+$layout_style = $lift_theme['lift-theme-layout-style'];
 ?>
 
 <header class="entry-header">

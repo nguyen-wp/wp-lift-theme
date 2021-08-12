@@ -14,7 +14,7 @@
     ) );
 
 	Redux::setSection( $opt_name, array(
-        'title'      => __( 'Body', 'lift-theme-options' ),
+        'title'      => __( 'Body <i style="color:red">(*)</i>', 'lift-theme-options' ),
         'id'         => 'lift-theme-typography-global',
         'subsection' => true,
 		'fields'     => array(
@@ -40,7 +40,7 @@
     ) );
 	
 	Redux::setSection( $opt_name, array(
-        'title'      => __( 'Header', 'lift-theme-options' ),
+        'title'      => __( 'Header <i style="color:red">(*)</i>', 'lift-theme-options' ),
         'id'         => 'lift-theme-typography-header',
         'subsection' => true,
 		'fields'     => array(

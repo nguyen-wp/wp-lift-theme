@@ -1,7 +1,4 @@
-.form-control, 
-input:not([type=button]), 
-input:not([type=submit]), 
-textarea {
+.form-control {
 	display: block;
 	width: 100%;
 	padding: $input-padding-y $input-padding-x;
@@ -219,9 +216,7 @@ textarea {
   
 
 
-.btn,
-button,
-input[type=submit] {
+.btn {
 	display: inline-block;
 	font-family: $btn-font-family;
 	font-weight: $btn-font-weight;

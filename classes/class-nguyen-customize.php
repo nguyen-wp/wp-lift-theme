@@ -90,37 +90,37 @@ if ( ! class_exists( 'LIFT_Theme_Customize' ) ) {
 			/**
 			 * Add excerpt or full text selector to customizer
 			 */
-			$wp_customize->add_section(
-				'excerpt_settings',
-				array(
-					'title'    => esc_html__( 'Excerpt Settings', 'wp-lift-theme' ),
-					'priority' => 120,
-				)
-			);
+			// $wp_customize->add_section(
+			// 	'excerpt_settings',
+			// 	array(
+			// 		'title'    => esc_html__( 'Excerpt Settings', 'wp-lift-theme' ),
+			// 		'priority' => 120,
+			// 	)
+			// );
 
-			$wp_customize->add_setting(
-				'display_excerpt_or_full_post',
-				array(
-					'capability'        => 'edit_theme_options',
-					'default'           => 'excerpt',
-					'sanitize_callback' => function( $value ) {
-						return 'excerpt' === $value || 'full' === $value ? $value : 'excerpt';
-					},
-				)
-			);
+			// $wp_customize->add_setting(
+			// 	'display_excerpt_or_full_post',
+			// 	array(
+			// 		'capability'        => 'edit_theme_options',
+			// 		'default'           => 'excerpt',
+			// 		'sanitize_callback' => function( $value ) {
+			// 			return 'excerpt' === $value || 'full' === $value ? $value : 'excerpt';
+			// 		},
+			// 	)
+			// );
 
-			$wp_customize->add_control(
-				'display_excerpt_or_full_post',
-				array(
-					'type'    => 'radio',
-					'section' => 'excerpt_settings',
-					'label'   => esc_html__( 'On Archive Pages, posts show:', 'wp-lift-theme' ),
-					'choices' => array(
-						'excerpt' => esc_html__( 'Summary', 'wp-lift-theme' ),
-						'full'    => esc_html__( 'Full text', 'wp-lift-theme' ),
-					),
-				)
-			);
+			// $wp_customize->add_control(
+			// 	'display_excerpt_or_full_post',
+			// 	array(
+			// 		'type'    => 'radio',
+			// 		'section' => 'excerpt_settings',
+			// 		'label'   => esc_html__( 'On Archive Pages, posts show:', 'wp-lift-theme' ),
+			// 		'choices' => array(
+			// 			'excerpt' => esc_html__( 'Summary', 'wp-lift-theme' ),
+			// 			'full'    => esc_html__( 'Full text', 'wp-lift-theme' ),
+			// 		),
+			// 	)
+			// );
 
 			// // Background color.
 			// // Include the custom control class.

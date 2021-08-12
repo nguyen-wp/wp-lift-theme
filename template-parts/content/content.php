@@ -10,8 +10,9 @@
  * @since 2021
  */
 
+global $lift_theme;
+$layout_style = $lift_theme['lift-theme-layout-style'];
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php if ( is_singular() ) : ?>
@@ -24,6 +25,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+		<div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
 		<?php
 		the_content(
 			lift_continue_reading_text()
@@ -39,9 +41,12 @@
 		);
 
 		?>
+		</div>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer default-max-width">
-		<?php lift_entry_meta_footer(); ?>
+		<div class="container<?= isset($layout_style) && $layout_style === '1' ? '-fluid': ''?>">
+			<?php lift_entry_meta_footer(); ?>
+		</div>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

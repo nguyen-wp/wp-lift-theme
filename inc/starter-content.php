@@ -161,9 +161,31 @@ function lift_get_starter_content() {
 				),
 			),
 
-			// Assign a menu to the "footer" location.
-			'footer'  => array(
+			// Assign a menu to the "secondary" location.
+			'secondary' => array(
 				'name'  => esc_html__( 'Secondary menu', 'wp-lift-theme' ),
+				'items' => array(
+					'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
+					'page_about',
+					'page_blog',
+					'page_contact',
+				),
+			),
+
+			// Assign a menu to the "social" location.
+			'top'  => array(
+				'name'  => esc_html__( 'Top menu', 'wp-lift-theme' ),
+				'items' => array(
+					'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
+					'page_about',
+					'page_blog',
+					'page_contact',
+				),
+			),
+
+			// Assign a menu to the "social" location.
+			'social'  => array(
+				'name'  => esc_html__( 'Social menu', 'wp-lift-theme' ),
 				'items' => array(
 					'link_facebook',
 					'link_twitter',

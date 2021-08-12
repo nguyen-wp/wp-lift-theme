@@ -1,0 +1,1 @@
+{"version":3,"file":"theme-default.css","sources":["theme-default.scss"],"sourcesContent":[".lift-theme-default {\n\t\n}\n\n.lift-theme-default {\n\t&.lift-theme-dark-mode {\n\n\t}\n}\n"],"names":[],"mappings":""}

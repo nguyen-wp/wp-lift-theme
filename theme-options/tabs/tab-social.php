@@ -19,7 +19,7 @@
 			array(
 				'id'       => 'lift-theme-social-media-enable',
                 'type'     => 'switch',
-                'title'    => __( 'Max width container', 'lift-theme-options' ),
+                'title'    => __( 'Enable/Disable <i style="color:red">(*)</i>', 'lift-theme-options' ),
                 'default'  => 0,
                 'on'       => 'On',
                 'off'      => 'Off',

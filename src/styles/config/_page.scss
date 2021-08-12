@@ -1,0 +1,28 @@
+header.page-header {
+    padding: 1rem 0;
+    background-color: var(--lift-theme-light);
+}
+
+@include media-breakpoint-up(md) {
+    header.page-header {
+        padding: 2rem 0;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    header.page-header {
+        padding: 3rem 0;
+    }
+}
+
+#content.lift-content {
+    article.post {
+        .archive-content {
+            .blog-content, 
+            .sidebar-content{
+                padding-bottom: 2rem;
+                padding-top: 2rem;
+            }
+        }
+    }
+}

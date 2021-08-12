@@ -1,0 +1,678 @@
+/**
+* @package LIFT Creations 
+* @subpackage Theme by Nguyen Pham
+* https://baonguyenyam.github.io/cv
+* @since 2021
+*/
+.admin-color-fresh .lift-theme-admin #redux-header, .admin-color-fresh .lift-theme-admin .redux-sidebar .redux-group-menu li.active a, .admin-color-fresh .lift-theme-admin .redux-sidebar .redux-group-menu li.activeChild.hasSubSections a {
+  background: #ff00b2;
+  background: -moz-linear-gradient(135deg, #ff00b2 0%, #0c6efd 100%);
+  background: -webkit-linear-gradient(135deg, #ff00b2 0%, #0c6efd 100%);
+  background: linear-gradient(135deg, #ff00b2 0%, #0c6efd 100%);
+  color: #fff; }
+
+#vc_logo,
+.composer-switch .logo-icon,
+.wpb_switch-to-gutenberg {
+  display: none !important; }
+
+#poststuff .composer-inner-switch {
+  border-radius: 3px;
+  overflow: hidden; }
+
+#poststuff .composer-switch {
+  overflow: hidden; }
+  #poststuff .composer-switch a {
+    line-height: 20px;
+    height: 20px; }
+
+.redux-notice-field.redux-success {
+  border: 0;
+  background-color: #e8ffd6;
+  border-radius: 10px;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15), 0 0 0 1px #d1efba inset; }
+
+#toplevel_page_lift_theme_options .toplevel_page_lift_theme_options .dashicons-admin-generic:before {
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -0.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f154"; }
+
+.admin-color-fresh .lift-theme-admin {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  border-radius: 10px !important;
+  overflow: hidden;
+  margin-top: 1rem;
+  background: #fff !important; }
+  .admin-color-fresh .lift-theme-admin #redux-header {
+    border-bottom: 0; }
+    .admin-color-fresh .lift-theme-admin #redux-header .display_header {
+      margin: 0 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      float: none; }
+      .admin-color-fresh .lift-theme-admin #redux-header .display_header:before {
+        display: inline-block;
+        content: "";
+        height: 40px;
+        width: 40px;
+        margin-right: 10px;
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAvdQTFRFAAAA1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/1iJ/////6Y1EFgAAAPt0Uk5TAAACBw0RHkBriaTE3PPx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") center center no-repeat;
+        background-size: cover;
+        filter: invert(100) brightness(1000); }
+      .admin-color-fresh .lift-theme-admin #redux-header .display_header span {
+        display: inline-flex;
+        margin-left: auto;
+        background: #fff;
+        padding: 3px 5px;
+        border-radius: 3px;
+        color: #666;
+        line-height: 1; }
+      .admin-color-fresh .lift-theme-admin #redux-header .display_header .redux-dev-mode-notice-container {
+        position: initial;
+        top: initial;
+        left: initial;
+        bottom: initial;
+        width: initial; }
+        .admin-color-fresh .lift-theme-admin #redux-header .display_header .redux-dev-mode-notice-container span {
+          display: inline-flex;
+          margin-left: auto;
+          background: #ffeb3b;
+          padding: 5px 5px;
+          border-radius: 3px;
+          color: #000 !important;
+          line-height: 1;
+          margin-right: 10px; }
+  .admin-color-fresh .lift-theme-admin #redux-intro-text {
+    background: #e7f1ff;
+    border-bottom: 1px solid #d2d2d2;
+    box-shadow: none;
+    padding: 10px 10px; }
+    .admin-color-fresh .lift-theme-admin #redux-intro-text p {
+      color: #384655; }
+  .admin-color-fresh .lift-theme-admin .redux-sidebar {
+    width: 300px; }
+    .admin-color-fresh .lift-theme-admin .redux-sidebar .redux-group-menu {
+      margin: 1rem 1rem 1rem 0 !important; }
+      .admin-color-fresh .lift-theme-admin .redux-sidebar .redux-group-menu li {
+        margin: 2px 0 !important;
+        box-sizing: border-box; }
+        .admin-color-fresh .lift-theme-admin .redux-sidebar .redux-group-menu li a {
+          border-radius: 0 5rem 5rem 0;
+          background-color: #efefef;
+          color: #303030;
+          opacity: 1;
+          width: 100%;
+          box-sizing: border-box; }
+          .admin-color-fresh .lift-theme-admin .redux-sidebar .redux-group-menu li a .extraIconSubsections {
+            display: none; }
+        .admin-color-fresh .lift-theme-admin .redux-sidebar .redux-group-menu li.active.hasSubSections a:after {
+          display: none; }
+        .admin-color-fresh .lift-theme-admin .redux-sidebar .redux-group-menu li.active.hasSubSections ul.subsection li a {
+          background-color: #e7f1ff;
+          color: #0c6efd;
+          padding: 9px; }
+        .admin-color-fresh .lift-theme-admin .redux-sidebar .redux-group-menu li ul.subsection {
+          padding: 0 1rem 0 0; }
+          .admin-color-fresh .lift-theme-admin .redux-sidebar .redux-group-menu li ul.subsection li {
+            box-sizing: border-box; }
+            .admin-color-fresh .lift-theme-admin .redux-sidebar .redux-group-menu li ul.subsection li a {
+              border-radius: 0 5rem 5rem 0;
+              background-color: #efefef;
+              box-sizing: border-box; }
+        .admin-color-fresh .lift-theme-admin .redux-sidebar .redux-group-menu li.activeChild.hasSubSections a {
+          text-shadow: none;
+          border-radius: 0 5rem 5rem 0; }
+        .admin-color-fresh .lift-theme-admin .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li a {
+          background-color: #e7f1ff;
+          color: #0c6efd;
+          padding: 9px; }
+        .admin-color-fresh .lift-theme-admin .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li.active a {
+          background-color: #534ee7;
+          color: #fff;
+          text-shadow: none; }
+          .admin-color-fresh .lift-theme-admin .redux-sidebar .redux-group-menu li.activeChild.hasSubSections ul.subsection li.active a:after {
+            display: none; }
+  .admin-color-fresh .lift-theme-admin .redux-main {
+    margin-left: 300px; }
+    .admin-color-fresh .lift-theme-admin .redux-main .ace_content .ace_print-margin {
+      display: none; }
+    .admin-color-fresh .lift-theme-admin .redux-main .redux-group-tab .code,
+    .admin-color-fresh .lift-theme-admin .redux-main .redux-group-tab code,
+    .admin-color-fresh .lift-theme-admin .redux-main .redux-group-tab kbd {
+      padding: 0;
+      background: none; }
+    .admin-color-fresh .lift-theme-admin .redux-main .redux-group-tab code:not(.language-html) {
+      font-size: 0.875em;
+      color: #d63384;
+      word-wrap: break-word; }
+    .admin-color-fresh .lift-theme-admin .redux-main .ui-controlgroup {
+      border: 2px solid #ccc !important;
+      display: inline-flex;
+      border-radius: 3px;
+      overflow: hidden; }
+      .admin-color-fresh .lift-theme-admin .redux-main .ui-controlgroup label {
+        margin: 0 !important;
+        border-radius: 0;
+        border-width: 0;
+        background: none !important; }
+        .admin-color-fresh .lift-theme-admin .redux-main .ui-controlgroup label.ui-checkboxradio-checked {
+          background-color: #0c6efd !important;
+          background-image: none !important;
+          box-shadow: none !important; }
+        .admin-color-fresh .lift-theme-admin .redux-main .ui-controlgroup label .ui-checkboxradio-icon {
+          display: none; }
+    .admin-color-fresh .lift-theme-admin .redux-main .button,
+    .admin-color-fresh .lift-theme-admin .redux-main .button-secondary {
+      background-color: #e7f1ff;
+      color: #0c6efd;
+      border-color: #0c6efd; }
+      .admin-color-fresh .lift-theme-admin .redux-main .button.button-primary,
+      .admin-color-fresh .lift-theme-admin .redux-main .button-secondary.button-primary {
+        background-color: #0c6efd;
+        color: #fff;
+        border: 0; }
+    .admin-color-fresh .lift-theme-admin .redux-main .button-primary {
+      background-color: #0c6efd;
+      color: #fff;
+      border: 0; }
+    .admin-color-fresh .lift-theme-admin .redux-main .noUi-connect {
+      background-color: #0c6efd !important;
+      background-image: none !important;
+      box-shadow: none !important; }
+    .admin-color-fresh .lift-theme-admin .redux-main .wp-picker-container .button {
+      background-color: initial; }
+    .admin-color-fresh .lift-theme-admin .redux-main .wp-picker-input-wrap {
+      flex-direction: row;
+      flex-wrap: nowrap; }
+      .admin-color-fresh .lift-theme-admin .redux-main .wp-picker-input-wrap label {
+        margin: 0 !important; }
+        .admin-color-fresh .lift-theme-admin .redux-main .wp-picker-input-wrap label input {
+          margin-left: 0 !important; }
+      .admin-color-fresh .lift-theme-admin .redux-main .wp-picker-input-wrap .button {
+        min-height: initial; }
+    .admin-color-fresh .lift-theme-admin .redux-main .wp-picker-open + .wp-picker-input-wrap {
+      display: flex; }
+    .admin-color-fresh .lift-theme-admin .redux-main .input-append,
+    .admin-color-fresh .lift-theme-admin .redux-main .input-prepend {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: stretch; }
+      .admin-color-fresh .lift-theme-admin .redux-main .input-append *,
+      .admin-color-fresh .lift-theme-admin .redux-main .input-prepend * {
+        border-color: #cccccc; }
+    .admin-color-fresh .lift-theme-admin .redux-main .redux-image-select-selected img {
+      border-color: #0c6efd; }
+    .admin-color-fresh .lift-theme-admin .redux-main .wp-picker-container {
+      margin-top: 0; }
+      .admin-color-fresh .lift-theme-admin .redux-main .wp-picker-container .wp-color-result-text {
+        display: none; }
+    .admin-color-fresh .lift-theme-admin .redux-main input {
+      border-color: #cccccc; }
+    .admin-color-fresh .lift-theme-admin .redux-main .switch-options label {
+      border-width: 2px;
+      border-color: #cccccc; }
+      .admin-color-fresh .lift-theme-admin .redux-main .switch-options label.cb-enable.selected {
+        background-color: #0c6efd !important;
+        background-image: none !important;
+        border-color: #0c6efd !important;
+        box-shadow: none !important; }
+      .admin-color-fresh .lift-theme-admin .redux-main .switch-options label.cb-disable.selected {
+        background-color: #dee2e6 !important;
+        color: #303030;
+        background-image: none !important;
+        border-color: #cccccc !important;
+        box-shadow: none !important; }
+    .admin-color-fresh .lift-theme-admin .redux-main .form-table > tbody > tr > th {
+      width: 20%; }
+    @media screen and (max-width: 1400px) {
+      .admin-color-fresh .lift-theme-admin .redux-main .form-table > tbody > tr > th {
+        width: 40%; } }
+    @media screen and (min-width: 1800px) {
+      .admin-color-fresh .lift-theme-admin .redux-main .form-table > tbody > tr > th {
+        width: 30%; } }
+    @media screen and (min-width: 2200px) {
+      .admin-color-fresh .lift-theme-admin .redux-main .form-table > tbody > tr > th {
+        width: 20%; } }
+    @media screen and (max-width: 1200px) {
+      .admin-color-fresh .lift-theme-admin .redux-main .form-table > tbody > tr > th {
+        width: 100%;
+        display: block; }
+        .admin-color-fresh .lift-theme-admin .redux-main .form-table > tbody > tr > th .redux_field_th {
+          padding-bottom: 0;
+          padding-right: 0; }
+      .admin-color-fresh .lift-theme-admin .redux-main .form-table > tbody > tr > td {
+        width: 100%;
+        display: block; } }
+    .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-style.lift-theme-admin-footer-style-bg #lift_theme-lift-theme-footer-style-bg-background-image {
+      display: none; }
+    .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-cssjs th {
+      width: 100% !important;
+      display: block;
+      margin-top: 0; }
+      .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-cssjs th .redux_field_th {
+        padding: 0 0 0.5rem 0; }
+    .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-cssjs td {
+      display: block;
+      margin-bottom: 1rem; }
+      .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-cssjs td .redux_field_td,
+      .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-cssjs td .redux-field-container {
+        padding: 0; }
+    .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-social-media .form-table th {
+      width: 100% !important;
+      display: block;
+      margin-top: 1rem; }
+      .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-social-media .form-table th .redux_field_th {
+        padding: 0 0 0.5rem 0; }
+    .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-social-media .form-table td {
+      display: block;
+      margin-bottom: 1rem; }
+      .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-social-media .form-table td .redux_field_td,
+      .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-social-media .form-table td .redux-field-container {
+        padding: 0; }
+        .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-social-media .form-table td .redux_field_td .regular-text,
+        .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-social-media .form-table td .redux-field-container .regular-text {
+          width: 100%;
+          max-width: 600px; }
+    .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-column.lift-theme-admin-footer-column-img .redux-image-select:nth-child(1) label {
+      position: relative;
+      box-sizing: border-box;
+      margin-bottom: 0.5rem !important; }
+      .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-column.lift-theme-admin-footer-column-img .redux-image-select:nth-child(1) label:after {
+        content: "1";
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        font-weight: bold;
+        color: #0c6efd;
+        z-index: 5; }
+    .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-column.lift-theme-admin-footer-column-img .redux-image-select:nth-child(2) label {
+      position: relative;
+      box-sizing: border-box;
+      margin-bottom: 0.5rem !important; }
+      .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-column.lift-theme-admin-footer-column-img .redux-image-select:nth-child(2) label:after {
+        content: "2";
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        font-weight: bold;
+        color: #0c6efd;
+        z-index: 5; }
+    .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-column.lift-theme-admin-footer-column-img .redux-image-select:nth-child(3) label {
+      position: relative;
+      box-sizing: border-box;
+      margin-bottom: 0.5rem !important; }
+      .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-column.lift-theme-admin-footer-column-img .redux-image-select:nth-child(3) label:after {
+        content: "3";
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        font-weight: bold;
+        color: #0c6efd;
+        z-index: 5; }
+    .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-column.lift-theme-admin-footer-column-img .redux-image-select:nth-child(4) label {
+      position: relative;
+      box-sizing: border-box;
+      margin-bottom: 0.5rem !important; }
+      .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-column.lift-theme-admin-footer-column-img .redux-image-select:nth-child(4) label:after {
+        content: "4";
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        font-weight: bold;
+        color: #0c6efd;
+        z-index: 5; }
+    .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-column.lift-theme-admin-footer-column-img .redux-image-select:nth-child(5) label {
+      position: relative;
+      box-sizing: border-box;
+      margin-bottom: 0.5rem !important; }
+      .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-column.lift-theme-admin-footer-column-img .redux-image-select:nth-child(5) label:after {
+        content: "5";
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        font-weight: bold;
+        color: #0c6efd;
+        z-index: 5; }
+    .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-column.lift-theme-admin-footer-column-img .redux-image-select:nth-child(6) label {
+      position: relative;
+      box-sizing: border-box;
+      margin-bottom: 0.5rem !important; }
+      .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-column.lift-theme-admin-footer-column-img .redux-image-select:nth-child(6) label:after {
+        content: "6";
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        font-weight: bold;
+        color: #0c6efd;
+        z-index: 5; }
+    .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-column.lift-theme-admin-footer-column-img .redux-image-select:nth-child(7) label {
+      position: relative;
+      box-sizing: border-box;
+      margin-bottom: 0.5rem !important; }
+      .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-column.lift-theme-admin-footer-column-img .redux-image-select:nth-child(7) label:after {
+        content: "7";
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        font-weight: bold;
+        color: #0c6efd;
+        z-index: 5; }
+    .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-column.lift-theme-admin-footer-column-img .redux-image-select:nth-child(8) label {
+      position: relative;
+      box-sizing: border-box;
+      margin-bottom: 0.5rem !important; }
+      .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-column.lift-theme-admin-footer-column-img .redux-image-select:nth-child(8) label:after {
+        content: "8";
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        font-weight: bold;
+        color: #0c6efd;
+        z-index: 5; }
+    .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-column.lift-theme-admin-footer-column-img .redux-image-select:nth-child(9) label {
+      position: relative;
+      box-sizing: border-box;
+      margin-bottom: 0.5rem !important; }
+      .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-column.lift-theme-admin-footer-column-img .redux-image-select:nth-child(9) label:after {
+        content: "9";
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        font-weight: bold;
+        color: #0c6efd;
+        z-index: 5; }
+    .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-column.lift-theme-admin-footer-column-img .redux-image-select:nth-child(10) label {
+      position: relative;
+      box-sizing: border-box;
+      margin-bottom: 0.5rem !important; }
+      .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-column.lift-theme-admin-footer-column-img .redux-image-select:nth-child(10) label:after {
+        content: "10";
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        font-weight: bold;
+        color: #0c6efd;
+        z-index: 5; }
+    .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-column.lift-theme-admin-footer-column-img .redux-image-select:nth-child(11) label {
+      position: relative;
+      box-sizing: border-box;
+      margin-bottom: 0.5rem !important; }
+      .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-column.lift-theme-admin-footer-column-img .redux-image-select:nth-child(11) label:after {
+        content: "11";
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        font-weight: bold;
+        color: #0c6efd;
+        z-index: 5; }
+    .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-column.lift-theme-admin-footer-column-img .redux-image-select:nth-child(12) label {
+      position: relative;
+      box-sizing: border-box;
+      margin-bottom: 0.5rem !important; }
+      .admin-color-fresh .lift-theme-admin .redux-main .lift-theme-admin-footer-column.lift-theme-admin-footer-column-img .redux-image-select:nth-child(12) label:after {
+        content: "12";
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        line-height: 1;
+        font-weight: bold;
+        color: #0c6efd;
+        z-index: 5; }
+
+.lh-1 {
+  line-height: 1 !important; }
+
+.lh-sm {
+  line-height: 1.25 !important; }
+
+.lh-base {
+  line-height: 1.5 !important; }
+
+.lh-lg {
+  line-height: 2 !important; }
+
+.fst-italic {
+  font-style: italic !important; }
+
+.fst-normal {
+  font-style: normal !important; }
+
+.fw-light {
+  font-weight: 300 !important; }
+
+.fw-lighter {
+  font-weight: lighter !important; }
+
+.fw-normal {
+  font-weight: 400 !important; }
+
+.fw-bold {
+  font-weight: 700 !important; }
+
+.fw-bolder {
+  font-weight: bolder !important; }
+
+.fs-1 {
+  font-size: calc(1.375rem + 1.5vw) !important; }
+
+.fs-2 {
+  font-size: calc(1.325rem + 0.9vw) !important; }
+
+.fs-3 {
+  font-size: calc(1.3rem + 0.6vw) !important; }
+
+.fs-4 {
+  font-size: calc(1.275rem + 0.3vw) !important; }
+
+.fs-5 {
+  font-size: 1.25rem !important; }
+
+.fs-6 {
+  font-size: 1rem !important; }
+
+@media (min-width: 1200px) {
+  .fs-1 {
+    font-size: 2.5rem !important; }
+  .fs-2 {
+    font-size: 2rem !important; }
+  .fs-3 {
+    font-size: 1.75rem !important; }
+  .fs-4 {
+    font-size: 1.5rem !important; } }
+
+.redux-main .table {
+  --bs-table-bg: transparent;
+  --bs-table-accent-bg: transparent;
+  --bs-table-striped-color: #212529;
+  --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+  --bs-table-active-color: #212529;
+  --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+  --bs-table-hover-color: #212529;
+  --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  vertical-align: top;
+  border-color: #dee2e6;
+  margin-top: 1rem;
+  border-spacing: 0; }
+
+.redux-main .table > :not(caption) > * > * {
+  padding: 0.5rem 0.5rem !important;
+  background-color: var(--bs-table-bg);
+  border: 0; }
+
+.redux-main .table tr {
+  border: 0 !important; }
+
+.redux-main .table th,
+.redux-main .table td {
+  border: 1px solid #d0d0d0 !important;
+  border-top: 0 !important; }
+
+.redux-main .table thead tr th,
+.redux-main .table thead tr td {
+  border-top: 1px solid #d0d0d0 !important; }
+
+.redux-main .table > tbody {
+  vertical-align: inherit; }
+
+.redux-main .table > thead {
+  vertical-align: bottom; }
+
+.redux-main .table > :not(:last-child) > :last-child > * {
+  border-bottom-color: currentColor; }
+
+.redux-main .caption-top {
+  caption-side: top; }
+
+.redux-main .table-sm > :not(caption) > * > * {
+  padding: 0.25rem 0.25rem; }
+
+.redux-main .table-bordered > :not(caption) > * {
+  border-width: 1px 0; }
+
+.redux-main .table-bordered > :not(caption) > * > * {
+  border-width: 0 1px; }
+
+.redux-main .table-borderless > :not(caption) > * > * {
+  border-bottom-width: 0; }
+
+.redux-main .table-striped > tbody > tr:nth-of-type(odd) {
+  --bs-table-accent-bg: var(--bs-table-striped-bg);
+  color: var(--bs-table-striped-color); }
+
+.redux-main .table-active {
+  --bs-table-accent-bg: var(--bs-table-active-bg);
+  color: var(--bs-table-active-color); }
+
+.redux-main .table-hover > tbody > tr:hover {
+  --bs-table-accent-bg: var(--bs-table-hover-bg);
+  color: var(--bs-table-hover-color); }
+
+.redux-main .table-primary {
+  --bs-table-bg: #cfe2ff;
+  --bs-table-striped-bg: #c5d7f2;
+  --bs-table-striped-color: #000;
+  --bs-table-active-bg: #bacbe6;
+  --bs-table-active-color: #000;
+  --bs-table-hover-bg: #bfd1ec;
+  --bs-table-hover-color: #000;
+  color: #000;
+  border-color: #bacbe6; }
+
+.redux-main .table-secondary {
+  --bs-table-bg: #e2e3e5;
+  --bs-table-striped-bg: #d7d8da;
+  --bs-table-striped-color: #000;
+  --bs-table-active-bg: #cbccce;
+  --bs-table-active-color: #000;
+  --bs-table-hover-bg: #d1d2d4;
+  --bs-table-hover-color: #000;
+  color: #000;
+  border-color: #cbccce; }
+
+.redux-main .table-success {
+  --bs-table-bg: #d1e7dd;
+  --bs-table-striped-bg: #c7dbd2;
+  --bs-table-striped-color: #000;
+  --bs-table-active-bg: #bcd0c7;
+  --bs-table-active-color: #000;
+  --bs-table-hover-bg: #c1d6cc;
+  --bs-table-hover-color: #000;
+  color: #000;
+  border-color: #bcd0c7; }
+
+.redux-main .table-info {
+  --bs-table-bg: #cff4fc;
+  --bs-table-striped-bg: #c5e8ef;
+  --bs-table-striped-color: #000;
+  --bs-table-active-bg: #badce3;
+  --bs-table-active-color: #000;
+  --bs-table-hover-bg: #bfe2e9;
+  --bs-table-hover-color: #000;
+  color: #000;
+  border-color: #badce3; }
+
+.redux-main .table-warning {
+  --bs-table-bg: #fff3cd;
+  --bs-table-striped-bg: #f2e7c3;
+  --bs-table-striped-color: #000;
+  --bs-table-active-bg: #e6dbb9;
+  --bs-table-active-color: #000;
+  --bs-table-hover-bg: #ece1be;
+  --bs-table-hover-color: #000;
+  color: #000;
+  border-color: #e6dbb9; }
+
+.redux-main .table-danger {
+  --bs-table-bg: #f8d7da;
+  --bs-table-striped-bg: #eccccf;
+  --bs-table-striped-color: #000;
+  --bs-table-active-bg: #dfc2c4;
+  --bs-table-active-color: #000;
+  --bs-table-hover-bg: #e5c7ca;
+  --bs-table-hover-color: #000;
+  color: #000;
+  border-color: #dfc2c4; }
+
+.redux-main .table-light {
+  --bs-table-bg: #f8f9fa;
+  --bs-table-striped-bg: #ecedee;
+  --bs-table-striped-color: #000;
+  --bs-table-active-bg: #dfe0e1;
+  --bs-table-active-color: #000;
+  --bs-table-hover-bg: #e5e6e7;
+  --bs-table-hover-color: #000;
+  color: #000;
+  border-color: #dfe0e1; }
+
+.redux-main .table-dark {
+  --bs-table-bg: #212529;
+  --bs-table-striped-bg: #2c3034;
+  --bs-table-striped-color: #fff;
+  --bs-table-active-bg: #373b3e;
+  --bs-table-active-color: #fff;
+  --bs-table-hover-bg: #323539;
+  --bs-table-hover-color: #fff;
+  color: #fff;
+  border-color: #373b3e; }
+
+.redux-main .table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; }
+
+/*# sourceMappingURL=admin.css.map */

@@ -33,6 +33,10 @@ $boo: #cccccc;
 	display: none !important;
 }
 #poststuff {
+	.composer-inner-switch {
+		border-radius: 3px;
+		overflow: hidden;
+	}
 	.composer-switch {
 		overflow: hidden;
 		a {
@@ -48,7 +52,7 @@ $boo: #cccccc;
 		border: 0;
 		background-color: #e8ffd6;
 		border-radius: 10px;
-		box-shadow: 0 2px 7px rgb(0 0 0 / 15%), 0 0 0 1px #d1efba inset;
+		box-shadow: 0 2px 7px rgba(0, 0, 0 ,.15), 0 0 0 1px #d1efba inset;
 	}
 }
 
@@ -107,6 +111,23 @@ $boo: #cccccc;
 					border-radius: 3px;
 					color: #666;
 					line-height: 1;
+				}
+				.redux-dev-mode-notice-container {
+					position: initial;
+					top: initial;
+					left: initial;
+					bottom: initial;
+					width: initial;
+					span {
+						display: inline-flex;
+						margin-left: auto;
+						background: #ffeb3b;
+						padding: 5px 5px;
+						border-radius: 3px;
+						color: #000 !important;
+						line-height: 1;
+						margin-right: 10px;
+					}
 				}
 			}
 		}
@@ -208,6 +229,11 @@ $boo: #cccccc;
 		}
 		.redux-main {
 			margin-left: 300px;
+			.ace_content {
+				.ace_print-margin {
+					display: none;
+				}
+			}
 			.redux-group-tab {
 				.code,
 				code,
@@ -219,6 +245,29 @@ $boo: #cccccc;
 					font-size: 0.875em;
 					color: #d63384;
 					word-wrap: break-word;
+				}
+			}
+			.redux-container-switch {
+			}
+			.ui-controlgroup {
+				border: 2px solid #ccc !important;
+				display: inline-flex;
+				border-radius: 3px;
+				overflow: hidden;
+				
+				label {
+					margin: 0 !important;
+					border-radius: 0;
+					border-width: 0;
+					background: none !important;
+					&.ui-checkboxradio-checked {
+						background-color: $secondcolor !important;
+						background-image: none !important;
+						box-shadow: none !important;
+					}
+					.ui-checkboxradio-icon {
+						display: none;
+					}
 				}
 			}
 			.button,
@@ -310,6 +359,35 @@ $boo: #cccccc;
 			}
 			.form-table > tbody > tr > th {
 				width: 20%;
+			}
+			@media screen and (max-width: 1400px) {
+				.form-table > tbody > tr > th {
+					width: 40%;
+				}
+			}
+			@media screen and (min-width: 1800px) {
+				.form-table > tbody > tr > th {
+					width: 30%;
+				}
+			}
+			@media screen and (min-width: 2200px) {
+				.form-table > tbody > tr > th {
+					width: 20%;
+				}
+			}
+			@media screen and (max-width: 1200px) {
+				.form-table > tbody > tr > th {
+					width: 100%;
+					display: block;
+					.redux_field_th {
+						padding-bottom: 0;
+						padding-right: 0;
+					}
+				}
+				.form-table > tbody > tr > td {
+					width: 100%;
+					display: block;
+				}
 			}
 			.lift-theme-admin-footer-style {
 				&.lift-theme-admin-footer-style-bg {

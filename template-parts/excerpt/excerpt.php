@@ -9,5 +9,5 @@
  * https://baonguyenyam.github.io/cv
  * @since 2021
  */
-
 the_excerpt();
+// echo excerpt(50); 

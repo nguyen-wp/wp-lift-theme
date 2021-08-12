@@ -1,30 +1,104 @@
 // INIT ROOT SETUP 
+$lift-theme-main: #007bff;
+$lift-theme-azure: #3a86ffff;
+$lift-theme-yellow: #e0e000ff;
+$lift-theme-mango: #ffbe0bff;
+$lift-theme-dark-orange: #fd8a09ff;
+$lift-theme-orange-pantone: #fb5607ff;
+$lift-theme-red-salsa: #fd2b3bff;
+$lift-theme-winter-sky: #ff006eff;
+$lift-theme-blue-violet: #8338ecff;
+$lift-theme-neon-blue: #5f5ff6ff;
+$lift-theme-dark-green: #588157;
+$lift-theme-caribbean-green: #06d6a0ff;
+$lift-theme-green: #38b000;
+$lift-theme-light-green: #70e000;
+$lift-theme-sbg: #0f0f0f;
+$lift-theme-bg: #18191a;
+$lift-theme-box: #242526;
+$lift-theme-box2: #2d2e2f;
+$lift-theme-border: #1b1c1d;
+$lift-theme-hover: #3a3b3c;
+$lift-theme-muted: #575757;
+$lift-theme-colorin: #848484;
+$lift-theme-gray: #969696;
+$lift-theme-texthover: #dfdfdf;
+$lift-theme-light: #f0f0f0;
+$lift-theme-white: #fff;
+$lift-theme-font-primary: 'system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"';
+$lift-theme-font-secondary: 'SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace';
+
 :root {
-	--global--font-primary: var(--font-headings, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
-	--global--font-secondary: var(--font-base, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif);
-	--lift-theme-main: #007bff;
-	--lift-theme-azure: #3a86ffff;
-	--lift-theme-yellow: #e0e000ff;
-	--lift-theme-mango: #ffbe0bff;
-	--lift-theme-dark-orange: #fd8a09ff;
-	--lift-theme-orange-pantone: #fb5607ff;
-	--lift-theme-red-salsa: #fd2b3bff;
-	--lift-theme-winter-sky: #ff006eff;
-	--lift-theme-blue-violet: #8338ecff;
-	--lift-theme-neon-blue: #5f5ff6ff;
-	--lift-theme-dark-green: #588157;
-	--lift-theme-caribbean-green: #06d6a0ff;
-	--lift-theme-green: #38b000;
-	--lift-theme-light-green: #70e000;
-	--lift-theme-sbg: #0f0f0f;
-	--lift-theme-bg: #18191a;
-	--lift-theme-box: #242526;
-	--lift-theme-box2: #2d2e2f;
-	--lift-theme-border: #1b1c1d;
-	--lift-theme-hover: #3a3b3c;
-	--lift-theme-muted: #575757;
-	--lift-theme-colorin: #848484;
-	--lift-theme-gray: #969696;
-	--lift-theme-texthover: #dfdfdf;
-	--lift-theme-white: #fff;
+	--global--font-primary: #{$lift-theme-font-primary};
+	--global--font-secondary: #{$lift-theme-font-secondary};
+	--lift-theme-main: #{$lift-theme-main};
+	--lift-theme-azure: #{$lift-theme-azure};
+	--lift-theme-yellow: #{$lift-theme-yellow};
+	--lift-theme-mango: #{$lift-theme-mango};
+	--lift-theme-dark-orange: #{$lift-theme-dark-orange};
+	--lift-theme-orange-pantone: #{$lift-theme-orange-pantone};
+	--lift-theme-red-salsa: #{$lift-theme-red-salsa};
+	--lift-theme-winter-sky: #{$lift-theme-winter-sky};
+	--lift-theme-blue-violet: #{$lift-theme-blue-violet};
+	--lift-theme-neon-blue: #{$lift-theme-neon-blue};
+	--lift-theme-dark-green: #{$lift-theme-dark-green};
+	--lift-theme-caribbean-green: #{$lift-theme-caribbean-green};
+	--lift-theme-green: #{$lift-theme-green};
+	--lift-theme-light-green: #{$lift-theme-light-green};
+	--lift-theme-sbg: #{$lift-theme-sbg};
+	--lift-theme-bg: #{$lift-theme-bg};
+	--lift-theme-box: #{$lift-theme-box};
+	--lift-theme-box2: #{$lift-theme-box2};
+	--lift-theme-border: #{$lift-theme-border};
+	--lift-theme-hover: #{$lift-theme-hover};
+	--lift-theme-muted: #{$lift-theme-muted};
+	--lift-theme-colorin: #{$lift-theme-colorin};
+	--lift-theme-gray: #{$lift-theme-gray};
+	--lift-theme-texthover: #{$lift-theme-texthover};
+	--lift-theme-light: #{$lift-theme-light};
+	--lift-theme-white: #{$lift-theme-white};
+}
+
+
+html {
+	// overflow: hidden;
+}
+body {
+	overflow-x: hidden;
+}
+
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute!important;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+#content {
+	&.lift-content {
+		.wpb_content_element {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.widget {
+	.nav-link {
+		padding: 0;
+		text-decoration: underline;
+	}
+	ul, ol {
+		ul, ol {
+			padding-left: 1rem;
+		}
+	}
+	&.widget_search {
+		margin-bottom: 1rem;
+	}
 }

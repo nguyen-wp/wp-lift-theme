@@ -75,21 +75,54 @@ function lift_theme_options_register_required_plugins() {
 			'name'               => 'WPBakery Page Builder', // The plugin name.
 			'slug'               => 'js_composer', // The plugin slug (typically the folder name).
 			'source'             => get_template_directory() . '/plugins/js_composer.zip', // The plugin source.
-			'required'           => true, // If false, the plugin is only 'recommended' instead of required.
-			'version'            => '5.6', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
+			'required'           => false, // If false, the plugin is only 'recommended' instead of required.
+			'version'            => '6.6.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher. If the plugin version is higher than the plugin version installed, the user will be notified to update the plugin.
 			'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
 			'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
 
 		// This is an example of how to include a plugin from an arbitrary external source in your theme.
-		// array(
-		// 	'name'         => 'TGM New Media Plugin', // The plugin name.
-		// 	'slug'         => 'tgm-new-media-plugin', // The plugin slug (typically the folder name).
-		// 	'source'       => 'https://s3.amazonaws.com/tgm/tgm-new-media-plugin.zip', // The plugin source.
-		// 	'required'     => true, // If false, the plugin is only 'recommended' instead of required.
-		// 	'external_url' => 'https://github.com/thomasgriffin/New-Media-Image-Uploader', // If set, overrides default API URL and points to an external URL.
-		// ),
+		array(
+			'name'         => 'Jetpack', // The plugin name.
+			'slug'         => 'jetpack', // The plugin slug (typically the folder name).
+			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
+		),
+		array(
+			'name'         => 'Wordfence Security', // The plugin name.
+			'slug'         => 'wordfence', // The plugin slug (typically the folder name).
+			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
+		),
+		array(
+			'name'         => 'AMP', // The plugin name.
+			'slug'         => 'amp', // The plugin slug (typically the folder name).
+			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
+		),
+		array(
+			'name'         => 'Autoptimize', // The plugin name.
+			'slug'         => 'autoptimize', // The plugin slug (typically the folder name).
+			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
+		),
+		array(
+			'name'         => 'Contact Form 7', // The plugin name.
+			'slug'         => 'contact-form-7', // The plugin slug (typically the folder name).
+			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
+		),
+		array(
+			'name'         => 'Really Simple SSL', // The plugin name.
+			'slug'         => 'really-simple-ssl', // The plugin slug (typically the folder name).
+			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
+		),
+		array(
+			'name'         => 'UpdraftPlus', // The plugin name.
+			'slug'         => 'updraftplus', // The plugin slug (typically the folder name).
+			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
+		),
+		array(
+			'name'         => 'Smush', // The plugin name.
+			'slug'         => 'wp-smushit', // The plugin slug (typically the folder name).
+			'required'     => false, // If false, the plugin is only 'recommended' instead of required.
+		),
 
 		// This is an example of how to include a plugin from a GitHub repository in your theme.
 		// This presumes that the plugin code is based in the root of the GitHub repository
@@ -113,11 +146,12 @@ function lift_theme_options_register_required_plugins() {
 		// By setting 'is_callable' to either a function from that plugin or a class method
 		// `array( 'class', 'method' )` similar to how you hook in to actions and filters, TGMPA can still
 		// recognize the plugin as being installed.
-		// array(
-		// 	'name'        => 'WordPress SEO by Yoast',
-		// 	'slug'        => 'wordpress-seo',
-		// 	'is_callable' => 'wpseo_init',
-		// ),
+		array(
+			'name'        => 'WordPress SEO by Yoast',
+			'slug'        => 'wordpress-seo',
+			'is_callable' => 'wpseo_init',
+			'required'     => false,
+		),
 
 	);
 

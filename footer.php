@@ -9,6 +9,7 @@
  */
 
 ?>
+				</div><!-- #wrapper -->
 			</div><!-- #main -->
 		</div><!-- #primary -->
 </main><!-- #content -->

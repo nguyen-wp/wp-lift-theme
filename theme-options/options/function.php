@@ -6,72 +6,43 @@
 * @since 2021
 */
 
-function lift_theme_export_css() {
-	global $lift_theme;
+function get_lift_theme_options() {
 
-	// LAYOUT 
-	$layout_value['layout_size'] = $lift_theme['lift-theme-layout-size'];
-	$layout_value['layout_size_value'] = $lift_theme['lift-theme-layout-size-value'];
-	$layout_css = '';
-	if($layout_value['layout_size']) {
-		$layout_css .= "#content.lift-content{max-width: ".$layout_value['layout_size_value']."px; margin: auto auto}";
-	}
-	// HEADER  
-	$header_value['header_size'] = $lift_theme['lift-theme-header-layout-size'];
-	$header_value['header_size_value'] = $lift_theme['lift-theme-header-layout-size-value'];
-	$header_css = '';
-	if($header_value['header_size']){
-		$header_css .= "#content.lift-header{max-width: ".$header_value['header_size_value']."px; margin: auto auto}";
-	}
-	// FOOTER 
-	$footer_value['footer_size'] = $lift_theme['lift-theme-footer-layout-size'];
-	$footer_value['footer_size_value'] = $lift_theme['lift-theme-footer-layout-size-value'];
-	$footer_value['footer_fixed'] = $lift_theme['lift-theme-footer-layout-fixed'];
-	$footer_css = '';
-	if($footer_value['footer_size']) {
-		$footer_css .= "#footer.lift-footer{max-width: ".$footer_value['footer_size_value']."px; margin: auto auto}";
-	}
-	if($footer_value['footer_fixed']) {
-		$footer_css .= "html,body {height: 100%;}.lift-wrapper{flex-direction: column;height: 100%;display:flex}#content.lift-content{flex-shrink: 0}#footer.lift-footer {margin-top: auto}";
-	}
+	$legacy_options  = get_option( 'lift_theme' );
+	$current_options = get_option( 'lift_theme_redux' );
 
-	echo '<style type="text/css" id="lift-inline-css-options-output">/*!
-* ╦  ╦╔═╗╔╦╗  ╔═╗┬─┐┌─┐┌─┐┌┬┐┬┌─┐┌┐┌┌─┐
-* ║  ║╠╣  ║   ║  ├┬┘├┤ ├─┤ │ ││ ││││└─┐
-* ╩═╝╩╚   ╩   ╚═╝┴└─└─┘┴ ┴ ┴ ┴└─┘┘└┘└─┘
-* Coding by Nguyen Pham
-* https://baonguyenyam.github.io
-*/
-	'
-	. $layout_css 
-	. $header_css 
-	. $footer_css . 
-	'</style>';
+	if ( ! empty( $current_options ) ) {
+		return $current_options;
+	} elseif ( ! empty( $legacy_options ) ) {
+		return $legacy_options;
+	} else {
+		return $current_options;
+	}
 }
-add_action( 'wp_head', 'lift_theme_export_css', 200 );
 
-// Theme Skin
+$lift_options = get_lift_theme_options();
+
+// Theme Skin Toggle Class Name
 function lift_theme_skin_body_class( $classes ) {
 
-	global $lift_theme;
-
+	$lift_options = get_lift_theme_options();
 	// LAYOUT 
-	$theme_value['theme_style'] = $lift_theme['lift-theme-global-style-theme'];
-	$theme_value['theme_dark_mode'] = $lift_theme['lift-theme-global-style-theme-dark'];
+	$theme_style = $lift_options['lift-theme-global-style-theme'];
+	$theme_dark_mode = $lift_options['lift-theme-global-style-theme-dark'];
 
 	$classes[] = '';
 
-	if ( $theme_value['theme_style'] === 'modern' ) {
+	if ( $theme_style === 'modern' ) {
 		$classes[] = 'lift-theme-modern';
-	} else if ( $theme_value['theme_style'] === 'material' ) {
+	} else if ( $theme_style === 'material' ) {
 		$classes[] = 'lift-theme-material';
-	} else if ( $theme_value['theme_style'] === 'monokai' ) {
+	} else if ( $theme_style === 'monokai' ) {
 		$classes[] = 'lift-theme-monokai';
 	} else {
 		$classes[] = 'lift-theme-default';
 	}
 
-	if ( $theme_value['theme_dark_mode']) {
+	if ( $theme_dark_mode) {
 		$classes[] = 'lift-theme-dark-mode';
 	}
 
@@ -85,34 +56,44 @@ function remove_redux_fw_submenu() {
 }
 add_action( 'admin_menu', 'remove_redux_fw_submenu', 999 );
 
+// Add Menu URL Class
+function __add_header_menu_item_class($atts) {
+	$atts['class'] = "nav-link";
+	return $atts;
+}
+add_filter('nav_menu_link_attributes', '__add_header_menu_item_class');
+
 // Add Bootstrap 
 function lift_custom_css_classes_for_vc_row_and_vc_column( $class_string, $tag ) {
 	if ( $tag == 'vc_row' || $tag == 'vc_row_inner' ) {
 		//   $class_string = str_replace( 'vc_row-fluid', 'my_row-fluid', $class_string ); 
 		$class_string = str_replace( 'vc_row', 'row', $class_string ); 
 	}
+	// var_dump($class_string);
+	// if ( $class_string == 'row wpb_row vc_inner row-fluid' ) {
+	// 	$class_string = str_replace( $class_string, 'row wpb_row vc_inner row-fluid container', $class_string ); 
+	// }
 	if ( $tag == 'vc_column' || $tag == 'vc_column_inner' ) {
 		// $class_string = preg_replace( '/vc_col-sm-(\d{1,2})/', 'my_col-sm-$1', $class_string );
 		$class_string = preg_replace( '/vc_column_container/', '', $class_string );
 		$class_string = preg_replace( '/vc_col-(xs|sm|md|lg|xl|xxl)-(\d{1,2})/', 'col-$1-$2', $class_string );
+		$class_string = preg_replace( '/vc_col-(xs|sm|md|lg|xl|xxl)-offset-(\d{1,2})/', 'offset-$1-$2', $class_string );
 	}
 	return $class_string; 
 }
 add_filter( 'vc_shortcodes_css_class', 'lift_custom_css_classes_for_vc_row_and_vc_column', 10, 2 );
 
 
-
-add_action( 'admin_notices', '_____LIFTcheckLicense' );
-
-// Theme Skin
+// Check License
 function _____LIFTcheckLicense() {
 
-	global $lift_theme;
-	$lift_license['domain'] = $lift_theme['lift-theme-license-code-domain'];
-	$lift_license['email'] = $lift_theme['lift-theme-license-code-email'];
-	$lift_license['package'] = $lift_theme['lift-theme-license-code-package'];
-	$lift_license['key'] = $lift_theme['lift-theme-license-code-key'];
-	$lift_license['license'] = $lift_theme['lift-theme-license-code-license'];
+	$lift_options = get_lift_theme_options();
+
+	$lift_license['domain'] = $lift_options['lift-theme-license-code-domain'];
+	$lift_license['email'] = $lift_options['lift-theme-license-code-email'];
+	$lift_license['package'] = $lift_options['lift-theme-license-code-package'];
+	$lift_license['key'] = $lift_options['lift-theme-license-code-key'];
+	$lift_license['license'] = $lift_options['lift-theme-license-code-license'];
 	$password = trim($lift_license['key'].$lift_license['domain'].$lift_license['email'].$lift_license['package']);
 	$LicenseVerify = true;
 	if (!password_verify($password, $lift_license['license'])) {
@@ -134,3 +115,7 @@ function _____LIFTcheckLicense() {
 	}
 
 }
+add_action( 'admin_notices', '_____LIFTcheckLicense' );
+
+
+

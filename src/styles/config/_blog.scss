@@ -1,0 +1,28 @@
+#content.lift-content {
+    article.post {
+        .entry-content {
+            .blog-content, 
+            .sidebar-content{
+                padding-bottom: 2rem;
+                padding-top: 2rem;
+            }
+        }
+    }
+}
+
+.single header.entry-header {
+    padding: 1rem 0;
+    background-color: var(--lift-theme-light);
+}
+
+@include media-breakpoint-up(md) {
+    .single header.entry-header {
+        padding: 2rem 0;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .single header.entry-header {
+        padding: 3rem 0;
+    }
+}

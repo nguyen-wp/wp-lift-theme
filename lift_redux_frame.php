@@ -15,4 +15,3 @@ require_once 'wp-content/plugins/redux-framework/ReduxCore/framework.php';
 require_once 'theme-options/app-config.php';
 require_once 'theme-options/required/class-tgm-plugin-activation.php';
 require_once 'theme-options/required/list.php';
-

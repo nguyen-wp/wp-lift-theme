@@ -15,14 +15,17 @@ if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 }
 
-require plugin_dir_path( __FILE__ ) . 'lift_redux_frame.php';
-require plugin_dir_path( __FILE__ ) . 'theme-config/setup.php';
-require plugin_dir_path( __FILE__ ) . 'theme-config/sidebar.php';
-require plugin_dir_path( __FILE__ ) . 'theme-config/scripts.php';
-require plugin_dir_path( __FILE__ ) . 'theme-config/styles.php';
-require plugin_dir_path( __FILE__ ) . 'theme-config/non-latin-language.php';
-require plugin_dir_path( __FILE__ ) . 'theme-config/content-width.php';
-require plugin_dir_path( __FILE__ ) . 'theme-config/customize-tab.php';
+require get_template_directory() . '/lift_redux_frame.php';
+require get_template_directory() . '/theme-config/setup.php';
+require get_template_directory() . '/theme-config/sidebar.php';
+require get_template_directory() . '/theme-config/breadcrumb.php';
+require get_template_directory() . '/theme-config/scripts.php';
+require get_template_directory() . '/theme-config/styles.php';
+require get_template_directory() . '/theme-config/non-latin-language.php';
+require get_template_directory() . '/theme-config/content-width.php';
+require get_template_directory() . '/theme-config/customize-tab.php';
+
+require get_template_directory() . '/classes/Mobile_Detect.php';
 
 // SVG Icons class.
 require get_template_directory() . '/classes/class-nguyen-svg-icons.php';
@@ -49,4 +52,3 @@ require get_template_directory() . '/inc/block-patterns.php';
 
 // Block Styles.
 require get_template_directory() . '/inc/block-styles.php';
-

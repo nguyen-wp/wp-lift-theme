@@ -1,0 +1,45 @@
+
+
+// BUTTON EDIT POST 
+.entry-footer {
+	display: block;
+	.edit-link {
+		margin: 2rem 0;
+		display: block;
+		> a {
+			color:var(--lift-theme-white) !important;
+			text-decoration: none;
+			padding: .35rem 1rem;
+    		border-radius: 5px;
+			background: var(--lift-theme-main);
+			display: inline-flex;
+			+ a {
+				margin-left: .25rem;
+			}
+			&:hover, 
+			&:focus, 
+			&:active {
+				background: var(--lift-theme-azure)
+			}
+		}
+	}
+}
+
+footer#footer {
+	background-color: var(--lift-theme-light);
+	padding: 2rem 0;
+	nav {
+		.menu,
+		ul,
+		ol,
+		.sub-menu {
+			list-style-type: none;
+			padding: 0;
+		}
+	}
+	.menu {
+		.menu-toggle {
+			display: none;
+		}
+	}
+}

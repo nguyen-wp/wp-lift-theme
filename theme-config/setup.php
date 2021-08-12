@@ -61,7 +61,9 @@ if ( ! function_exists( 'lift_setup' ) ) {
 		register_nav_menus(
 			array(
 				'primary' => esc_html__( 'Primary menu', 'wp-lift-theme' ),
-				'footer'  => __( 'Secondary menu', 'wp-lift-theme' ),
+				'secondary'  => __( 'Secondary menu', 'wp-lift-theme' ),
+				'top'  => __( 'Top menu', 'wp-lift-theme' ),
+				'social'  => __( 'Social menu', 'wp-lift-theme' ),
 			)
 		);
 

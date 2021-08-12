@@ -1,0 +1,24 @@
+#backtotop {
+	display: none;
+	bottom: 2rem;
+	right: 2rem;
+	visibility: hidden;
+	opacity: 0;
+	background: var(--lift-theme-light);
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    width: 3em;
+    height: 3em;
+    border: 1px solid var(--lift-theme-texthover);
+    border-radius: 5px;
+	z-index: 1000;
+	color: var(--lift-theme-gray);
+	text-decoration: none;
+	transition: .25s all ease-in-out;
+	&.active {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+

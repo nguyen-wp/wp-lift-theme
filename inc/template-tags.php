@@ -24,13 +24,13 @@ if ( ! function_exists( 'lift_posted_on' ) ) {
 			esc_attr( get_the_date( DATE_W3C ) ),
 			esc_html( get_the_date() )
 		);
-		echo '<span class="posted-on">';
+		echo '<div class="posted-on">';
 		printf(
 			/* translators: %s: Publish date. */
 			esc_html__( 'Published %s', 'wp-lift-theme' ),
 			$time_string // phpcs:ignore WordPress.Security.EscapeOutput
 		);
-		echo '</span>';
+		echo '</div>';
 	}
 }
 
@@ -44,13 +44,13 @@ if ( ! function_exists( 'lift_posted_by' ) ) {
 	 */
 	function lift_posted_by() {
 		if ( ! get_the_author_meta( 'description' ) && post_type_supports( get_post_type(), 'author' ) ) {
-			echo '<span class="byline">';
+			echo '<div class="byline">';
 			printf(
 				/* translators: %s: Author name. */
 				esc_html__( 'By %s', 'wp-lift-theme' ),
 				'<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" rel="author">' . esc_html( get_the_author() ) . '</a>'
 			);
-			echo '</span>';
+			echo '</div>';
 		}
 	}
 }
@@ -66,6 +66,16 @@ if ( ! function_exists( 'lift_entry_meta_footer' ) ) {
 	 */
 	function lift_entry_meta_footer() {
 
+		global $lift_theme;
+		$content_tag = $lift_theme['lift-theme-blog-style-content-tag'];
+		$content_category = $lift_theme['lift-theme-blog-style-content-category'];
+		$content_date = $lift_theme['lift-theme-blog-style-content-date'];
+		$content_author = $lift_theme['lift-theme-blog-style-content-author'];
+
+		$archive_tag = $lift_theme['lift-theme-blog-style-archive-tag'];
+		$archive_category = $lift_theme['lift-theme-blog-style-archive-category'];
+		$archive_date = $lift_theme['lift-theme-blog-style-archive-date'];
+		$archive_author = $lift_theme['lift-theme-blog-style-archive-author'];
 		// Early exit if not a post.
 		if ( 'post' !== get_post_type() ) {
 			return;
@@ -75,97 +85,118 @@ if ( ! function_exists( 'lift_entry_meta_footer' ) ) {
 		if ( ! is_single() ) {
 
 			if ( is_sticky() ) {
-				echo '<p>' . esc_html_x( 'Featured post', 'Label for sticky posts', 'wp-lift-theme' ) . '</p>';
+				echo '<div class="featured-post">' . esc_html_x( 'Featured post', 'Label for sticky posts', 'wp-lift-theme' ) . '</div>';
 			}
 
 			$post_format = get_post_format();
 			if ( 'aside' === $post_format || 'status' === $post_format ) {
-				echo '<p><a href="' . esc_url( get_permalink() ) . '">' . lift_continue_reading_text() . '</a></p>'; // phpcs:ignore WordPress.Security.EscapeOutput
+				echo '<div class="featured-post"><a href="' . esc_url( get_permalink() ) . '">' . lift_continue_reading_text() . '</a></div>'; // phpcs:ignore WordPress.Security.EscapeOutput
 			}
 
 			// Posted on.
-			lift_posted_on();
-
-			// Edit post link.
-			edit_post_link(
-				sprintf(
-					/* translators: %s: Name of current post. Only visible to screen readers. */
-					esc_html__( 'Edit %s', 'wp-lift-theme' ),
-					'<span class="screen-reader-text">' . get_the_title() . '</span>'
-				),
-				'<span class="edit-link">',
-				'</span><br>'
-			);
+			if(!isset($archive_date) || $archive_date === '0' || $archive_date == 0) {
+				lift_posted_on();
+			}
 
 			if ( has_category() || has_tag() ) {
 
 				echo '<div class="post-taxonomies">';
 
 				/* translators: Used between list items, there is a space after the comma. */
-				$categories_list = get_the_category_list( __( ', ', 'wp-lift-theme' ) );
-				if ( $categories_list ) {
-					printf(
-						/* translators: %s: List of categories. */
-						'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'wp-lift-theme' ) . ' </span>',
-						$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
-					);
+				if(!isset($archive_category) || $archive_category === '0' || $archive_category == 0) {
+					$categories_list = get_the_category_list( __( ', ', 'wp-lift-theme' ) );
+					if ( $categories_list ) {
+						printf(
+							/* translators: %s: List of categories. */
+							'<div class="cat-links">' . esc_html__( 'Categorized as %s', 'wp-lift-theme' ) . ' </div>',
+							$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
+						);
+					}
 				}
 
 				/* translators: Used between list items, there is a space after the comma. */
-				$tags_list = get_the_tag_list( '', __( ', ', 'wp-lift-theme' ) );
-				if ( $tags_list ) {
-					printf(
-						/* translators: %s: List of tags. */
-						'<span class="tags-links">' . esc_html__( 'Tagged %s', 'wp-lift-theme' ) . '</span>',
-						$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
-					);
+				if(!isset($archive_tag) || $archive_tag === '0' || $archive_tag == 0) {
+					$tags_list = get_the_tag_list( '', __( ', ', 'wp-lift-theme' ) );
+					if ( $tags_list ) {
+						printf(
+							/* translators: %s: List of tags. */
+							'<div class="tags-links">' . esc_html__( 'Tagged %s', 'wp-lift-theme' ) . '</div>',
+							$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
+						);
+					}
 				}
 				echo '</div>';
 			}
+
+			// Edit post link.
+			edit_post_link(
+				sprintf(
+					/* translators: %s: Name of current post. Only visible to screen readers. */
+					esc_html__( 'Edit %s', 'wp-lift-theme' ),
+					'<div class="screen-reader-text">' . get_the_title() . '</div>'
+				),
+				'<div class="edit-link admintoolbar">',
+				'</div>'
+			);
+
 		} else {
 
 			echo '<div class="posted-by">';
 			// Posted on.
-			lift_posted_on();
+			if(!isset($content_date) || $content_date === '0' || $content_date == 0) {
+				lift_posted_on();
+			}
 			// Posted by.
-			lift_posted_by();
-			// Edit post link.
-			edit_post_link(
-				sprintf(
-					/* translators: %s: Name of current post. Only visible to screen readers. */
-					esc_html__( 'Edit %s', 'wp-lift-theme' ),
-					'<span class="screen-reader-text">' . get_the_title() . '</span>'
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-			echo '</div>';
+			if(!isset($content_author) || $content_author === '0' || $content_author == 0) {
+				lift_posted_by();
+			}
+			
 
 			if ( has_category() || has_tag() ) {
 
 				echo '<div class="post-taxonomies">';
 
 				/* translators: Used between list items, there is a space after the comma. */
-				$categories_list = get_the_category_list( __( ', ', 'wp-lift-theme' ) );
-				if ( $categories_list ) {
-					printf(
-						/* translators: %s: List of categories. */
-						'<span class="cat-links">' . esc_html__( 'Categorized as %s', 'wp-lift-theme' ) . ' </span>',
-						$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
-					);
+				if(!isset($content_category) || $content_category === '0' || $content_category == 0) {
+					$categories_list = get_the_category_list( __( ', ', 'wp-lift-theme' ) );
+					if ( $categories_list ) {
+						printf(
+							/* translators: %s: List of categories. */
+							'<div class="cat-links">' . esc_html__( 'Categorized as %s', 'wp-lift-theme' ) . ' </div>',
+							$categories_list // phpcs:ignore WordPress.Security.EscapeOutput
+						);
+					}
 				}
 
 				/* translators: Used between list items, there is a space after the comma. */
-				$tags_list = get_the_tag_list( '', __( ', ', 'wp-lift-theme' ) );
-				if ( $tags_list ) {
-					printf(
-						/* translators: %s: List of tags. */
-						'<span class="tags-links">' . esc_html__( 'Tagged %s', 'wp-lift-theme' ) . '</span>',
-						$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
-					);
+				if(!isset($content_tag) || $content_tag === '0' || $content_tag == 0) {
+					$tags_list = get_the_tag_list( '', __( ', ', 'wp-lift-theme' ) );
+					if ( $tags_list ) {
+						printf(
+							/* translators: %s: List of tags. */
+							'<div class="tags-links">' . esc_html__( 'Tagged %s', 'wp-lift-theme' ) . '</div>',
+							$tags_list // phpcs:ignore WordPress.Security.EscapeOutput
+						);
+					}
 				}
 				echo '</div>';
 			}
+
+
+
+			// Edit post link.
+			edit_post_link(
+				sprintf(
+					/* translators: %s: Name of current post. Only visible to screen readers. */
+					esc_html__( 'Edit %s', 'wp-lift-theme' ),
+					'<div class="screen-reader-text">' . get_the_title() . '</div>'
+				),
+				'<div class="edit-link admintoolbar">',
+				'</div>'
+			);
+			echo '</div>';
+
+
 		}
 	}
 }
@@ -182,6 +213,7 @@ if ( ! function_exists( 'lift_post_thumbnail' ) ) {
 	 * @return void
 	 */
 	function lift_post_thumbnail() {
+				
 		if ( ! lift_can_show_post_thumbnail() ) {
 			return;
 		}
@@ -226,13 +258,15 @@ if ( ! function_exists( 'lift_the_posts_navigation' ) ) {
 	function lift_the_posts_navigation() {
 		the_posts_pagination(
 			array(
-				'before_page_number' => esc_html__( 'Page', 'wp-lift-theme' ) . ' ',
+				// 'before_page_number' => esc_html__( 'Page', 'wp-lift-theme' ) . ' ',
 				'mid_size'           => 0,
+				'type'				 => 'list',
+				'class'				 => 'lift-pagination',
 				'prev_text'          => sprintf(
 					'%s <span class="nav-prev-text">%s</span>',
 					is_rtl() ? lift_get_icon_svg( 'ui', 'arrow_right' ) : lift_get_icon_svg( 'ui', 'arrow_left' ),
 					wp_kses(
-						__( 'Newer <span class="nav-short">posts</span>', 'wp-lift-theme' ),
+						__( '<span class="text">Previous</span><span class="nav-short"></span>', 'wp-lift-theme' ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -243,7 +277,7 @@ if ( ! function_exists( 'lift_the_posts_navigation' ) ) {
 				'next_text'          => sprintf(
 					'<span class="nav-next-text">%s</span> %s',
 					wp_kses(
-						__( 'Older <span class="nav-short">posts</span>', 'wp-lift-theme' ),
+						__( '<span class="text">Next</span><span class="nav-short"></span>', 'wp-lift-theme' ),
 						array(
 							'span' => array(
 								'class' => array(),
